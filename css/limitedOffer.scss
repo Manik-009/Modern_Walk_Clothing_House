@@ -1,0 +1,947 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap");
+$mainColor: #000;
+$primaryColor: #fff;
+@mixin border-rad($radius) {
+   -webkit-border-radius: $radius;
+   -moz-border-radius: $radius;
+   border-radius: $radius;
+}
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   font: {
+      family: "Source Code Pro", monospace, arial, helvetica, cursive;
+      size: 1em;
+      weight: 500;
+   }
+   line-height: 1.7em;
+   letter-spacing: 2px;
+   word-spacing: 2px;
+   background: linear-gradient(to right, #ece9e6, #ffffff);
+   color: $mainColor;
+}
+::-webkit-scrollbar {
+   background-color: red;
+   width: 7px;
+}
+::-webkit-scrollbar-track {
+   width: 5px;
+   background-color: $primaryColor;
+}
+::-webkit-scrollbar-thumb {
+   width: 5px;
+   border-radius: 30px;
+   background: linear-gradient(to top, #232526, #414345);
+}
+
+@import "styled/header";
+.home-limited {
+   display: flex;
+   margin: 2em 0;
+   justify-content: space-around;
+   align-items: center;
+   flex-wrap: wrap;
+   border-bottom: 2px solid $mainColor;
+   padding: 0 15px 30px 15px;
+   #heading {
+      display: flex;
+   }
+   #top {
+      text-decoration: none;
+      color: $mainColor;
+      font-weight: bold;
+   }
+}
+@import "styled/back2top";
+main {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   background: linear-gradient(to right, #232526, #414345);
+   padding: 2em;
+   .rate {
+      background: seagreen;
+      color: $primaryColor;
+      padding: 5px;
+      border: 2px solid green;
+      @include border-rad(20px);
+   }
+   %h2 {
+      text-align: center;
+   }
+   h2 {
+      @extend %h2;
+   }
+   h3 {
+      @extend %h2;
+      font-size: 0.9em;
+   }
+   h4 {
+      font-weight: bold;
+      text-shadow: 0 0 1px $mainColor;
+      @extend %h2;
+      span {
+         text-decoration: line-through;
+      }
+   }
+   h5 {
+      @extend %h2;
+   }
+   #saree1 {
+      background: white;
+      width: 400px;
+      margin: 30px 0;
+      position: relative;
+      #image {
+         width: 200px;
+         height: 350px;
+         margin: 20px auto;
+         display: block;
+      }
+      #s1LeftBtn {
+         position: absolute;
+         top: 30%;
+         font-size: 3em;
+         border: none;
+         padding: 5px;
+         background: transparent;
+         color: $mainColor;
+      }
+      #buy {
+         background: gold;
+         border: 2px solid transparent;
+         border-radius: 30px;
+         margin: 10px auto;
+         padding: 10px 30px;
+         font-size: 1em;
+         display: block;
+      }
+      #s1RightBtn {
+         position: absolute;
+         top: 30%;
+         right: 0%;
+         font-size: 3em;
+         border: none;
+         padding: 5px;
+         background: transparent;
+         color: $mainColor;
+      }
+      .new {
+         text-decoration: none;
+         color: $mainColor;
+         font-size: 0.7em;
+      }
+      .rating {
+         display: flex;
+         justify-content: space-around;
+         cursor: pointer;
+         align-items: center;
+         font-weight: bold;
+         img {
+            width: 70px;
+            object-fit: cover;
+         }
+      }
+      @keyframes saree1 {
+         0% {
+            opacity: 0;
+         }
+         50% {
+            opacity: 0.5;
+         }
+         100% {
+            opacity: 1;
+         }
+      }
+   }
+   #saree2 {
+      background: white;
+      width: 400px;
+      margin: 30px 0;
+      position: relative;
+      #image {
+         width: 250px;
+         height: 350px;
+         margin: 20px auto;
+         display: block;
+      }
+      #s1LeftBtn1 {
+         position: absolute;
+         top: 30%;
+         font-size: 3em;
+         border: none;
+         padding: 5px;
+         background: transparent;
+         color: $mainColor;
+      }
+      #buy1 {
+         background: gold;
+         border: 2px solid transparent;
+         border-radius: 30px;
+         margin: 10px auto;
+         padding: 10px 30px;
+         font-size: 1em;
+         display: block;
+      }
+      #s1RightBtn1 {
+         position: absolute;
+         top: 30%;
+         right: 0%;
+         font-size: 3em;
+         border: none;
+         padding: 5px;
+         background: transparent;
+         color: $mainColor;
+      }
+      .new {
+         text-decoration: none;
+         color: $mainColor;
+         font-size: 0.7em;
+      }
+      .rating {
+         display: flex;
+         justify-content: space-around;
+         cursor: pointer;
+         align-items: center;
+         font-weight: bold;
+         img {
+            width: 70px;
+            object-fit: cover;
+         }
+      }
+   }
+   #saree3 {
+      background: white;
+      width: 400px;
+      position: relative;
+      margin: 30px 0;
+      #image {
+         width: 200px;
+         height: 350px;
+         margin: 20px auto;
+         display: block;
+      }
+      #s1LeftBtn2 {
+         position: absolute;
+         top: 30%;
+         font-size: 3em;
+         border: none;
+         padding: 5px;
+         background: transparent;
+         color: $mainColor;
+      }
+      #buy2 {
+         background: gold;
+         border: 2px solid transparent;
+         border-radius: 30px;
+         margin: 10px auto;
+         padding: 10px 30px;
+         font-size: 1em;
+         display: block;
+      }
+      #s1RightBtn2 {
+         position: absolute;
+         top: 30%;
+         right: 0%;
+         font-size: 3em;
+         border: none;
+         padding: 5px;
+         background: transparent;
+         color: $mainColor;
+      }
+      .new {
+         text-decoration: none;
+         color: $mainColor;
+         font-size: 0.6em;
+      }
+      .small {
+         font-size: 0.6em;
+      }
+      .rating {
+         display: flex;
+         justify-content: space-around;
+         cursor: pointer;
+         align-items: center;
+         font-weight: bold;
+         img {
+            width: 70px;
+            object-fit: cover;
+         }
+      }
+   }
+   #saree4 {
+      background: white;
+      width: 400px;
+      position: relative;
+      margin: 30px 0;
+      #image {
+         width: 200px;
+         height: 350px;
+         margin: 20px auto;
+         display: block;
+      }
+      #s1LeftBtn3 {
+         position: absolute;
+         top: 30%;
+         font-size: 3em;
+         border: none;
+         padding: 5px;
+         background: transparent;
+         color: $mainColor;
+      }
+      #buy3 {
+         background: gold;
+         border: 2px solid transparent;
+         border-radius: 30px;
+         margin: 10px auto;
+         padding: 10px 30px;
+         font-size: 1em;
+         display: block;
+      }
+      #s1RightBtn3 {
+         position: absolute;
+         top: 30%;
+         right: 0%;
+         font-size: 3em;
+         border: none;
+         padding: 5px;
+         background: transparent;
+         color: $mainColor;
+      }
+      .new {
+         text-decoration: none;
+         color: $mainColor;
+         font-size: 0.7em;
+      }
+      p {
+         padding: 10px;
+         font-size: 1.3em;
+      }
+      .rating {
+         text-align: center;
+      }
+   }
+   #tshirt {
+      background: white;
+      width: 400px;
+      position: relative;
+      margin: 30px 0;
+      #image {
+         width: 200px;
+         height: 350px;
+         margin: 20px auto;
+         display: block;
+      }
+      #s1LeftBtn4 {
+         position: absolute;
+         top: 30%;
+         font-size: 3em;
+         border: none;
+         padding: 5px;
+         background: transparent;
+         color: $mainColor;
+      }
+      p {
+         padding: 10px;
+         font-size: 1.3em;
+      }
+      #buy4 {
+         background: gold;
+         border: 2px solid transparent;
+         border-radius: 30px;
+         margin: 10px auto;
+         padding: 10px 30px;
+         font-size: 1em;
+         display: block;
+      }
+      #s1RightBtn4 {
+         position: absolute;
+         top: 30%;
+         right: 0%;
+         font-size: 3em;
+         border: none;
+         padding: 5px;
+         background: transparent;
+         color: $mainColor;
+      }
+      h6 {
+         color: green;
+         text-align: center;
+         font-weight: bold;
+      }
+      .new {
+         text-decoration: none;
+         color: $mainColor;
+         font-size: 0.7em;
+      }
+      .rating {
+         text-align: center;
+      }
+   }
+   #tshirt1 {
+      background: white;
+      width: 400px;
+      position: relative;
+      margin: 30px 0;
+      #image {
+         width: 320px;
+         height: 350px;
+         margin: 20px auto;
+         display: block;
+      }
+      h3 {
+         padding: 0 20px;
+      }
+      #s1LeftBtn5 {
+         position: absolute;
+         top: 30%;
+         font-size: 3em;
+         border: none;
+         padding: 5px;
+         background: transparent;
+         color: $mainColor;
+      }
+      #buy5 {
+         background: gold;
+         border: 2px solid transparent;
+         border-radius: 30px;
+         margin: 10px auto;
+         padding: 10px 30px;
+         font-size: 1em;
+         display: block;
+      }
+      #s1RightBtn5 {
+         position: absolute;
+         top: 30%;
+         right: 0%;
+         font-size: 3em;
+         border: none;
+         padding: 5px;
+         background: transparent;
+         color: $mainColor;
+      }
+      h6 {
+         color: green;
+         text-align: center;
+         font-weight: bold;
+      }
+      .new {
+         text-decoration: none;
+         color: $mainColor;
+         font-size: 0.65em;
+      }
+      .rating {
+         display: flex;
+         justify-content: space-around;
+         cursor: pointer;
+         align-items: center;
+         font-weight: bold;
+         img {
+            width: 70px;
+            object-fit: cover;
+         }
+      }
+   }
+   #tshirt2 {
+      background: white;
+      width: 400px;
+      position: relative;
+      margin: 30px 0;
+      #image {
+         width: 120px;
+         height: 350px;
+         margin: 20px auto;
+         display: block;
+      }
+      #s1LeftBtn6 {
+         position: absolute;
+         top: 30%;
+         font-size: 3em;
+         border: none;
+         padding: 5px;
+         background: transparent;
+         color: $mainColor;
+      }
+      #buy6 {
+         background: gold;
+         border: 2px solid transparent;
+         border-radius: 30px;
+         margin: 10px auto;
+         padding: 10px 30px;
+         font-size: 1em;
+         display: block;
+      }
+      #s1RightBtn6 {
+         position: absolute;
+         top: 30%;
+         right: 0%;
+         font-size: 3em;
+         border: none;
+         padding: 5px;
+         background: transparent;
+         color: $mainColor;
+      }
+      h6 {
+         color: red;
+         text-align: center;
+         font-weight: bold;
+      }
+      .new {
+         text-decoration: none;
+         color: $mainColor;
+         font-size: 0.7em;
+      }
+      .rating {
+         display: flex;
+         justify-content: space-around;
+         cursor: pointer;
+         align-items: center;
+         font-weight: bold;
+         img {
+            width: 70px;
+            object-fit: cover;
+         }
+      }
+   }
+   #tshirt3 {
+      background: white;
+      width: 400px;
+      position: relative;
+      margin: 30px 0;
+      #image {
+         width: 250px;
+         height: 350px;
+         margin: 20px auto;
+         display: block;
+      }
+      #s1LeftBtn7 {
+         position: absolute;
+         top: 30%;
+         font-size: 3em;
+         border: none;
+         padding: 5px;
+         background: transparent;
+         color: $mainColor;
+      }
+      #buy7 {
+         background: gold;
+         border: 2px solid transparent;
+         border-radius: 30px;
+         margin: 10px auto;
+         padding: 10px 30px;
+         font-size: 1em;
+         display: block;
+      }
+      p {
+         padding: 10px;
+         font-size: 1.3em;
+      }
+      #s1RightBtn7 {
+         position: absolute;
+         top: 30%;
+         right: 0%;
+         font-size: 3em;
+         border: none;
+         padding: 5px;
+         background: transparent;
+         color: $mainColor;
+      }
+      h6 {
+         color: green;
+         text-align: center;
+         font-weight: bold;
+      }
+      .new {
+         text-decoration: none;
+         color: $mainColor;
+      }
+      .rating {
+         text-align: center;
+         p {
+            font-size: 1em;
+         }
+      }
+   }
+   #watch {
+      background: white;
+      width: 400px;
+      position: relative;
+      margin: 30px 0;
+      #image {
+         width: 300px;
+         height: 350px;
+         margin: 20px auto;
+         display: block;
+      }
+      #s1LeftBtn8 {
+         position: absolute;
+         top: 30%;
+         font-size: 3em;
+         border: none;
+         padding: 5px;
+         background: transparent;
+         color: $mainColor;
+      }
+      h3 {
+         padding: 0 20px;
+      }
+      #buy8 {
+         background: gold;
+         border: 2px solid transparent;
+         border-radius: 30px;
+         margin: 10px auto;
+         padding: 10px 30px;
+         font-size: 1em;
+         display: block;
+      }
+      #s1RightBtn8 {
+         position: absolute;
+         top: 30%;
+         right: 0%;
+         font-size: 3em;
+         border: none;
+         padding: 5px;
+         background: transparent;
+         color: $mainColor;
+      }
+      .small {
+         font-size: 0.6em;
+      }
+      .new {
+         text-decoration: none;
+         color: $mainColor;
+      }
+      .rating {
+         display: flex;
+         justify-content: space-around;
+         cursor: pointer;
+         align-items: center;
+         font-weight: bold;
+         img {
+            width: 70px;
+            object-fit: cover;
+         }
+      }
+   }
+}
+footer {
+   background: $mainColor;
+   color: $primaryColor;
+   display: flex;
+   padding: 20px;
+   align-items: center;
+   justify-content: space-between;
+   span {
+      position: relative;
+      font-size: 2em;
+      font-weight: bold;
+      animation: heart 5s ease-in-out 0.1s infinite alternate;
+   }
+   %phone {
+      text-decoration: none;
+      color: $primaryColor;
+      font-weight: bold;
+      margin: 0 5px;
+   }
+   @keyframes heart {
+      0% {
+         color: crimson;
+         filter: drop-shadow(0 0px 1px red);
+      }
+      25% {
+         color: crimson;
+         filter: drop-shadow(1px -3px 1px red);
+      }
+      50% {
+         color: crimson;
+         filter: drop-shadow(3px -6px 1px red);
+      }
+      75% {
+         color: crimson;
+         filter: drop-shadow(5px -9px 1px red);
+      }
+      100% {
+         color: crimson;
+         filter: drop-shadow(7px -12px 1px red);
+      }
+   }
+   .soc-links {
+      @extend %phone;
+   }
+   .fa-facebook {
+      &:hover {
+         font-size: 1.7em;
+         color: #0072ff;
+         transition: all 1s;
+      }
+   }
+   .fa-instagram {
+      &:hover {
+         font-size: 1.7em;
+         color: #fd1d1d;
+         filter: drop-shadow(0 0 1px #fcb045);
+         transition: all 1s;
+      }
+   }
+   .fa-youtube {
+      &:hover {
+         font-size: 1.7em;
+         color: crimson;
+         transition: all 1s;
+      }
+   }
+   .fa-linkedin {
+      &:hover {
+         font-size: 1.7em;
+         color: #021b79;
+         transition: all 1s;
+      }
+   }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 688px) {
+   header {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      img {
+         width: 200px;
+      }
+      .navigation {
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         width: 100vw;
+         background: rgba(0, 0, 0, 0.2);
+         clip-path: polygon(
+            0% 15%,
+            15% 15%,
+            15% 0%,
+            85% 0%,
+            85% 15%,
+            100% 15%,
+            100% 85%,
+            85% 85%,
+            85% 100%,
+            15% 100%,
+            15% 85%,
+            0% 85%
+         );
+
+         li {
+            display: none;
+            margin: 25px;
+            font-size: 0.8em;
+         }
+      }
+      label {
+         display: block;
+         font-size: 2.5em;
+         margin-bottom: 10px;
+         margin-right: 1.5ch;
+      }
+      #toggle:checked + .navigation li {
+         display: block;
+         animation: oj 0.9s linear 0.1s;
+         @keyframes oj {
+            from {
+               opacity: 0;
+               transform: translateY(-100px) rotateZ(360deg) scale(0);
+            }
+            to {
+               opacity: 1;
+               transform: translateY(0px) rotateZ(0) scale(1);
+            }
+         }
+      }
+      .fa-shopping-cart {
+         display: block;
+         margin: 20px auto;
+      }
+   }
+   .home-limited {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      #time {
+         margin-top: 15px;
+      }
+   }
+   main {
+      padding: 10px;
+      .rate {
+         padding: 3px;
+         border: 1px solid green;
+         @include border-rad(10px);
+      }
+      #saree1 {
+         width: 300px;
+         #image {
+            width: 150px;
+            height: 250px;
+         }
+         .new {
+            font-size: 0.5em;
+         }
+         .rating {
+            margin: 10px 0;
+            img {
+               width: 40px;
+               object-fit: cover;
+            }
+         }
+      }
+      #saree2 {
+         width: 300px;
+         #image {
+            width: 150px;
+            height: 250px;
+         }
+         .new {
+            font-size: 0.5em;
+         }
+         .rating {
+            margin: 10px 0;
+            img {
+               width: 40px;
+               object-fit: cover;
+            }
+         }
+      }
+      #saree3 {
+         width: 300px;
+         #image {
+            width: 150px;
+            height: 250px;
+         }
+         .new {
+            font-size: 0.5em;
+         }
+         .rating {
+            margin: 10px 0;
+            img {
+               width: 40px;
+               object-fit: cover;
+            }
+         }
+      }
+      #saree4 {
+         width: 300px;
+         #image {
+            width: 150px;
+            height: 250px;
+         }
+         .new {
+            font-size: 0.5em;
+         }
+         p {
+            padding: 10px;
+            font-size: 1.5em;
+         }
+      }
+      #tshirt {
+         width: 300px;
+         #image {
+            width: 150px;
+            height: 250px;
+         }
+         .new {
+            font-size: 0.5em;
+         }
+         p {
+            padding: 10px;
+            font-size: 1.5em;
+         }
+      }
+      #tshirt1 {
+         width: 300px;
+         #image {
+            width: 200px;
+            height: 250px;
+         }
+         .new {
+            font-size: 0.5em;
+         }
+         .rating {
+            margin: 10px 0;
+            img {
+               width: 40px;
+               object-fit: cover;
+            }
+         }
+      }
+      #tshirt2 {
+         width: 300px;
+         #image {
+            width: 100px;
+            height: 250px;
+         }
+         .new {
+            font-size: 0.5em;
+         }
+         .rating {
+            margin: 10px 0;
+            img {
+               width: 40px;
+               object-fit: cover;
+            }
+         }
+      }
+      #tshirt3 {
+         width: 300px;
+         #image {
+            width: 200px;
+            height: 250px;
+         }
+         .new {
+            font-size: 0.5em;
+         }
+         p {
+            padding: 10px;
+            font-size: 1.5em;
+         }
+      }
+      #watch {
+         width: 300px;
+         #image {
+            width: 200px;
+            height: 250px;
+         }
+         .new {
+            font-size: 0.5em;
+         }
+         .rating {
+            margin: 10px 0;
+            img {
+               width: 40px;
+               object-fit: cover;
+            }
+         }
+      }
+   }
+   footer {
+      font-size: 0.7em;
+      display: flex;
+      flex-direction: column;
+      height: 17ch;
+   }
+}
+@media only screen and (min-width: 689px) and (max-width: 1024px) {
+   header {
+      font-size: 0.73em;
+      img {
+         width: 100px;
+      }
+      .fa-shopping-cart {
+         font-size: 1.5em;
+      }
+   }
+   footer {
+      font-size: 0.7em;
+   }
+}

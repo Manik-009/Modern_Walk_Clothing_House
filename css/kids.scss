@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap");
+$mainColor: #000;
+$primaryColor: #fff;
+@mixin border-rad($radius) {
+   -webkit-border-radius: $radius;
+   -moz-border-radius: $radius;
+   border-radius: $radius;
+}
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   font: {
+      family: "Source Code Pro", monospace, arial, helvetica, cursive;
+      size: 1em;
+      weight: 500;
+   }
+   line-height: 1.7em;
+   letter-spacing: 2px;
+   word-spacing: 2px;
+   background: linear-gradient(to right, #ece9e6, #ffffff);
+   color: $mainColor;
+}
+::-webkit-scrollbar {
+   background-color: red;
+   width: 7px;
+}
+::-webkit-scrollbar-track {
+   width: 5px;
+   background-color: $primaryColor;
+}
+::-webkit-scrollbar-thumb {
+   width: 5px;
+   border-radius: 30px;
+   background: linear-gradient(to top, #232526, #414345);
+}
+
+@import "styled/header";
+@import "styled/kids-slider";
+@import "styled/back2top";
+@import "styled/kids-main";
+@import "styled/men-footer";
+@import "styled/kids-media";

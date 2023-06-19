@@ -1,0 +1,84 @@
+.img-slider {
+   background: rgba(0, 0, 0, 0.6);
+   position: relative;
+   padding: 30px 20px 10px 20px;
+   width: 80vw;
+   height: 70ch;
+   margin: 0 auto;
+   clear: both;
+   @include border-rad(100px);
+   user-select: none;
+   animation: slider 1.5s ease-in-out 0.01s;
+   @keyframes slider {
+      0% {
+         opacity: 0;
+      }
+      100% {
+         opacity: 1;
+      }
+   }
+   img {
+      width: 65vw;
+      height: 60ch;
+      position: relative;
+      display: block;
+      margin: 15px auto 0 auto;
+      @include border-rad(30px);
+      animation: p 3s linear 0.01s infinite alternate;
+      @keyframes p {
+         0% {
+            filter: drop-shadow(0 0 0 white);
+         }
+         20% {
+            filter: drop-shadow(0 0 2px white);
+         }
+         40% {
+            filter: drop-shadow(0 0 4px white);
+         }
+         60% {
+            filter: drop-shadow(0 0 6px white);
+         }
+         80% {
+            filter: drop-shadow(0 0 8px white);
+         }
+         100% {
+            filter: drop-shadow(0 0 10px white);
+         }
+      }
+   }
+   #left-btn {
+      position: absolute;
+      top: 33%;
+      background: whitesmoke;
+      left: 3%;
+      border: none;
+      height: 250px;
+      width: 40px;
+      @include border-rad(50px);
+   }
+   #camera {
+      position: absolute;
+      top: 25%;
+      border: none;
+      background: whitesmoke;
+      left: 3.2%;
+      height: 35px;
+      width: 35px;
+      color: grey;
+      font-weight: bold;
+      font-size: 1.5em;
+      @include border-rad(50%);
+   }
+   #right-btn {
+      position: absolute;
+      top: 45%;
+      border: none;
+      background: whitesmoke;
+      right: 2%;
+      height: 70px;
+      width: 70px;
+      color: silver;
+      font-size: 1.3em;
+      @include border-rad(50%);
+   }
+}

@@ -1,0 +1,121 @@
+.main-slider {
+   position: relative;
+   width: 70vw;
+   margin: 0 auto;
+   display: flex;
+   animation: slider 1s linear 0.01s;
+   &:hover {
+      filter: drop-shadow(15px 15px 10px $mainColor);
+      transition: all 1s;
+   }
+   @keyframes slider {
+      0% {
+         opacity: 0;
+         transform: scale(0);
+      }
+      100% {
+         opacity: 1;
+         transform: scale(1);
+      }
+   }
+   #slider1 {
+      img {
+         width: 30vw;
+         height: 70ch;
+      }
+   }
+   #slider2 {
+      img {
+         width: 40vw;
+         height: 70ch;
+      }
+   }
+   #btn {
+      font-size: 0.7em;
+      position: absolute;
+      top: 50%;
+      left: 38.1%;
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      padding: 25px;
+      background: linear-gradient(to right, #ece9e6, #ffffff);
+      font-weight: bold;
+      text-shadow: 0 0 0 $mainColor;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $mainColor;
+      transition: clip-path 1s;
+      // border: none;
+      &:hover {
+         transition: all 1s;
+         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+         background: $mainColor;
+         color: $primaryColor;
+         border-bottom: 5px solid #fff;
+         border-right: 3px solid #fff;
+         @include border-rad(50%);
+      }
+   }
+   %nails {
+      background: linear-gradient(to right, #ece9e6, #ffffff);
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      @include border-rad(20px);
+   }
+   #nail1 {
+      @extend %nails;
+      top: 3%;
+      left: 1%;
+   }
+   #nail2 {
+      top: 3%;
+      right: 1%;
+      @extend %nails;
+   }
+   #nail3 {
+      bottom: 5%;
+      left: 1%;
+      @extend %nails;
+   }
+   #nail4 {
+      bottom: 5%;
+      right: 1%;
+      @extend %nails;
+   }
+   #star {
+      position: absolute;
+      top: 0;
+      img {
+         width: 70vw;
+         height: 5vh;
+         animation: stars 4s linear 0.1s 2 alternate;
+         opacity: 0;
+      }
+      @keyframes stars {
+         0% {
+            height: 10vh;
+            opacity: 0.2;
+         }
+         20% {
+            height: 20vh;
+            opacity: 0.4;
+         }
+         40% {
+            height: 35vh;
+            opacity: 0.6;
+         }
+         60% {
+            height: 50vh;
+            opacity: 0.8;
+         }
+         80% {
+            height: 60vh;
+            opacity: 1;
+         }
+         100% {
+            height: 70vh;
+            opacity: 1;
+         }
+      }
+   }
+}

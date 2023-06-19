@@ -1,0 +1,185 @@
+@media only screen and (min-width: 689px) and (max-width: 1024px) {
+   header {
+      font-size: 0.73em;
+      img {
+         width: 100px;
+      }
+      .fa-shopping-cart {
+         font-size: 1.5em;
+      }
+   }
+   .img-slider {
+      margin-top: 5ch;
+      height: 35ch;
+      .small {
+         width: 10vw;
+         height: 15ch;
+         opacity: 0.5;
+      }
+      #big {
+         width: 30vw;
+         height: 35ch;
+         transform: none;
+         filter: drop-shadow(7px 7px 7px black);
+      }
+      .small2 {
+         width: 15vw;
+         height: 20ch;
+         opacity: 0.7;
+      }
+      .small3 {
+         width: 5vw;
+         height: 10ch;
+         opacity: 0.3;
+      }
+   }
+   footer {
+      font-size: 0.7em;
+      .footer-content {
+         flex-wrap: wrap;
+      }
+      #offers {
+         h5 {
+            font-size: 1.2em;
+         }
+      }
+   }
+}
+@media only screen and (min-width: 320px) and (max-width: 688px) {
+   header {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      img {
+         width: 150px;
+      }
+      .navigation {
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         width: 100vw;
+         background: rgba(0, 0, 0, 0.2);
+         li {
+            display: none;
+            margin: 25px;
+            font-size: 0.8em;
+         }
+      }
+      label {
+         display: block;
+         font-size: 2.5em;
+         margin-bottom: 10px;
+         margin-right: 1.5ch;
+      }
+      #toggle:checked + .navigation li {
+         display: block;
+         animation: oj 0.7s linear 0s;
+         @keyframes oj {
+            0% {
+               opacity: 0;
+               transform: translateX(-200px) skew(0deg) scale(0);
+            }
+            50% {
+               opacity: 0;
+               transform: translateX(-100px) scale(0.5) skew(90deg);
+            }
+            100% {
+               opacity: 1;
+               transform: translateX(0px) scale(1) skew(0deg);
+            }
+         }
+      }
+      .fa-shopping-cart {
+         display: block;
+         margin: 20px auto;
+      }
+   }
+   .img-slider {
+      height: 35vh;
+      width: auto;
+      .small {
+         width: 8vw;
+         height: 8vh;
+         opacity: 0.5;
+      }
+      #big {
+         width: 35vw;
+         height: 25vh;
+         transform: none;
+         filter: drop-shadow(7px 7px 7px black);
+      }
+      .small2 {
+         width: 12vw;
+         height: 12vh;
+         opacity: 0.7;
+      }
+      .small3 {
+         width: 5vw;
+         height: 5vh;
+         opacity: 0.3;
+      }
+   }
+   #men-acc {
+      font-size: 0.8em;
+      .watches {
+         margin: 3em 10px 2em 10px;
+      }
+      .backpack {
+         margin: 2em 10px;
+      }
+      .wallet {
+         margin: 2em 10px;
+      }
+      .belt {
+         margin: 2em 10px;
+      }
+      .sunglasses {
+         margin: 2em 10px;
+      }
+   }
+   #women-acc {
+      font-size: 0.8em;
+      word-spacing: 0;
+      .women-watches {
+         margin: 3em 10px 2em 10px;
+      }
+      .women-bag {
+         margin: 2em 10px;
+         #bag-h3 {
+            width: 270px;
+         }
+      }
+      .women-wallet {
+         margin: 2em 10px;
+      }
+      .women-sunglasses {
+         margin: 2em 10px;
+      }
+   }
+   footer {
+      margin-top: 5vh;
+      font-size: 0.7em;
+      .copyright {
+         display: flex;
+         flex-direction: column;
+         height: 17ch;
+      }
+      #slogan {
+         margin: 2em 7ch;
+      }
+      #offers {
+         align-self: center;
+         h5 {
+            width: 20ch;
+         }
+      }
+      .footer-cont {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }
+   }
+}

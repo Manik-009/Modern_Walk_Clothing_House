@@ -1,0 +1,1053 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Code Pro", monospace, arial, helvetica, cursive;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.7em;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  color: #000;
+}
+
+::-webkit-scrollbar {
+  background-color: red;
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  width: 5px;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  border-radius: 30px;
+  background: linear-gradient(to top, #232526, #414345);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  text-transform: uppercase;
+}
+header img {
+  width: 170px;
+  align-self: flex-start;
+  position: relative;
+  animation: logo 0.5s linear 0.1s forwards;
+}
+header img:hover {
+  filter: drop-shadow(0 5px 1px silver);
+}
+@keyframes logo {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+header .navigation {
+  list-style: none;
+  position: relative;
+  animation: li 0.9s linear 0.1s forwards;
+}
+@keyframes li {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+header .navigation #active, header .navigation .links {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+header .navigation .links {
+  transition: all 0.5s;
+  position: relative;
+}
+header .navigation .links:hover {
+  text-shadow: 0 0 0 #000;
+}
+header .navigation .links::after {
+  content: "★";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  display: none;
+}
+header .navigation .links:hover::after {
+  display: block;
+  position: absolute;
+  left: 35%;
+  bottom: 20%;
+  animation: star 0.7s ease;
+  filter: drop-shadow(2px 2px 0px silver);
+}
+@keyframes star {
+  0% {
+    opacity: 0;
+    transform: translateX(-1.5vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+header .navigation #active {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+header .navigation li {
+  display: inline;
+  margin: 0 3vw;
+}
+header label {
+  display: none;
+  font-size: 2em;
+  float: right;
+  width: 26px;
+}
+header #toggle {
+  display: none;
+  clear: right;
+}
+header .fa-shopping-cart {
+  margin-right: 50px;
+  font-size: 1.5em;
+  position: relative;
+  animation: cart 1s ease 0.1s;
+  cursor: pointer;
+}
+@keyframes cart {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.home-limited {
+  display: flex;
+  margin: 2em 0;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #000;
+  padding: 0 15px 30px 15px;
+}
+.home-limited #heading {
+  display: flex;
+}
+.home-limited #top {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+#back2top {
+  font-size: 2em;
+  width: 45px;
+  height: 45px;
+  padding: 5px 5px 10px 5px;
+  background: grey;
+  text-align: center;
+  position: fixed;
+  bottom: 7.5%;
+  right: 4%;
+  z-index: 100;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+#back2top a {
+  text-decoration: none;
+  color: #fff;
+}
+#back2top a:hover {
+  filter: drop-shadow(0 0 2px #fff);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: linear-gradient(to right, #232526, #414345);
+  padding: 2em;
+}
+main .rate {
+  background: seagreen;
+  color: #fff;
+  padding: 5px;
+  border: 2px solid green;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+main h5, main h4, main h3, main h2 {
+  text-align: center;
+}
+main h3 {
+  font-size: 0.9em;
+}
+main h4 {
+  font-weight: bold;
+  text-shadow: 0 0 1px #000;
+}
+main h4 span {
+  text-decoration: line-through;
+}
+main #saree1 {
+  background: white;
+  width: 400px;
+  margin: 30px 0;
+  position: relative;
+}
+main #saree1 #image {
+  width: 200px;
+  height: 350px;
+  margin: 20px auto;
+  display: block;
+}
+main #saree1 #s1LeftBtn {
+  position: absolute;
+  top: 30%;
+  font-size: 3em;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  color: #000;
+}
+main #saree1 #buy {
+  background: gold;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  margin: 10px auto;
+  padding: 10px 30px;
+  font-size: 1em;
+  display: block;
+}
+main #saree1 #s1RightBtn {
+  position: absolute;
+  top: 30%;
+  right: 0%;
+  font-size: 3em;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  color: #000;
+}
+main #saree1 .new {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.7em;
+}
+main #saree1 .rating {
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+  align-items: center;
+  font-weight: bold;
+}
+main #saree1 .rating img {
+  width: 70px;
+  object-fit: cover;
+}
+@keyframes saree1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+main #saree2 {
+  background: white;
+  width: 400px;
+  margin: 30px 0;
+  position: relative;
+}
+main #saree2 #image {
+  width: 250px;
+  height: 350px;
+  margin: 20px auto;
+  display: block;
+}
+main #saree2 #s1LeftBtn1 {
+  position: absolute;
+  top: 30%;
+  font-size: 3em;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  color: #000;
+}
+main #saree2 #buy1 {
+  background: gold;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  margin: 10px auto;
+  padding: 10px 30px;
+  font-size: 1em;
+  display: block;
+}
+main #saree2 #s1RightBtn1 {
+  position: absolute;
+  top: 30%;
+  right: 0%;
+  font-size: 3em;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  color: #000;
+}
+main #saree2 .new {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.7em;
+}
+main #saree2 .rating {
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+  align-items: center;
+  font-weight: bold;
+}
+main #saree2 .rating img {
+  width: 70px;
+  object-fit: cover;
+}
+main #saree3 {
+  background: white;
+  width: 400px;
+  position: relative;
+  margin: 30px 0;
+}
+main #saree3 #image {
+  width: 200px;
+  height: 350px;
+  margin: 20px auto;
+  display: block;
+}
+main #saree3 #s1LeftBtn2 {
+  position: absolute;
+  top: 30%;
+  font-size: 3em;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  color: #000;
+}
+main #saree3 #buy2 {
+  background: gold;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  margin: 10px auto;
+  padding: 10px 30px;
+  font-size: 1em;
+  display: block;
+}
+main #saree3 #s1RightBtn2 {
+  position: absolute;
+  top: 30%;
+  right: 0%;
+  font-size: 3em;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  color: #000;
+}
+main #saree3 .new {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.6em;
+}
+main #saree3 .small {
+  font-size: 0.6em;
+}
+main #saree3 .rating {
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+  align-items: center;
+  font-weight: bold;
+}
+main #saree3 .rating img {
+  width: 70px;
+  object-fit: cover;
+}
+main #saree4 {
+  background: white;
+  width: 400px;
+  position: relative;
+  margin: 30px 0;
+}
+main #saree4 #image {
+  width: 200px;
+  height: 350px;
+  margin: 20px auto;
+  display: block;
+}
+main #saree4 #s1LeftBtn3 {
+  position: absolute;
+  top: 30%;
+  font-size: 3em;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  color: #000;
+}
+main #saree4 #buy3 {
+  background: gold;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  margin: 10px auto;
+  padding: 10px 30px;
+  font-size: 1em;
+  display: block;
+}
+main #saree4 #s1RightBtn3 {
+  position: absolute;
+  top: 30%;
+  right: 0%;
+  font-size: 3em;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  color: #000;
+}
+main #saree4 .new {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.7em;
+}
+main #saree4 p {
+  padding: 10px;
+  font-size: 1.3em;
+}
+main #saree4 .rating {
+  text-align: center;
+}
+main #tshirt {
+  background: white;
+  width: 400px;
+  position: relative;
+  margin: 30px 0;
+}
+main #tshirt #image {
+  width: 200px;
+  height: 350px;
+  margin: 20px auto;
+  display: block;
+}
+main #tshirt #s1LeftBtn4 {
+  position: absolute;
+  top: 30%;
+  font-size: 3em;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  color: #000;
+}
+main #tshirt p {
+  padding: 10px;
+  font-size: 1.3em;
+}
+main #tshirt #buy4 {
+  background: gold;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  margin: 10px auto;
+  padding: 10px 30px;
+  font-size: 1em;
+  display: block;
+}
+main #tshirt #s1RightBtn4 {
+  position: absolute;
+  top: 30%;
+  right: 0%;
+  font-size: 3em;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  color: #000;
+}
+main #tshirt h6 {
+  color: green;
+  text-align: center;
+  font-weight: bold;
+}
+main #tshirt .new {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.7em;
+}
+main #tshirt .rating {
+  text-align: center;
+}
+main #tshirt1 {
+  background: white;
+  width: 400px;
+  position: relative;
+  margin: 30px 0;
+}
+main #tshirt1 #image {
+  width: 320px;
+  height: 350px;
+  margin: 20px auto;
+  display: block;
+}
+main #tshirt1 h3 {
+  padding: 0 20px;
+}
+main #tshirt1 #s1LeftBtn5 {
+  position: absolute;
+  top: 30%;
+  font-size: 3em;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  color: #000;
+}
+main #tshirt1 #buy5 {
+  background: gold;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  margin: 10px auto;
+  padding: 10px 30px;
+  font-size: 1em;
+  display: block;
+}
+main #tshirt1 #s1RightBtn5 {
+  position: absolute;
+  top: 30%;
+  right: 0%;
+  font-size: 3em;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  color: #000;
+}
+main #tshirt1 h6 {
+  color: green;
+  text-align: center;
+  font-weight: bold;
+}
+main #tshirt1 .new {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.65em;
+}
+main #tshirt1 .rating {
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+  align-items: center;
+  font-weight: bold;
+}
+main #tshirt1 .rating img {
+  width: 70px;
+  object-fit: cover;
+}
+main #tshirt2 {
+  background: white;
+  width: 400px;
+  position: relative;
+  margin: 30px 0;
+}
+main #tshirt2 #image {
+  width: 120px;
+  height: 350px;
+  margin: 20px auto;
+  display: block;
+}
+main #tshirt2 #s1LeftBtn6 {
+  position: absolute;
+  top: 30%;
+  font-size: 3em;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  color: #000;
+}
+main #tshirt2 #buy6 {
+  background: gold;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  margin: 10px auto;
+  padding: 10px 30px;
+  font-size: 1em;
+  display: block;
+}
+main #tshirt2 #s1RightBtn6 {
+  position: absolute;
+  top: 30%;
+  right: 0%;
+  font-size: 3em;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  color: #000;
+}
+main #tshirt2 h6 {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+}
+main #tshirt2 .new {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.7em;
+}
+main #tshirt2 .rating {
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+  align-items: center;
+  font-weight: bold;
+}
+main #tshirt2 .rating img {
+  width: 70px;
+  object-fit: cover;
+}
+main #tshirt3 {
+  background: white;
+  width: 400px;
+  position: relative;
+  margin: 30px 0;
+}
+main #tshirt3 #image {
+  width: 250px;
+  height: 350px;
+  margin: 20px auto;
+  display: block;
+}
+main #tshirt3 #s1LeftBtn7 {
+  position: absolute;
+  top: 30%;
+  font-size: 3em;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  color: #000;
+}
+main #tshirt3 #buy7 {
+  background: gold;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  margin: 10px auto;
+  padding: 10px 30px;
+  font-size: 1em;
+  display: block;
+}
+main #tshirt3 p {
+  padding: 10px;
+  font-size: 1.3em;
+}
+main #tshirt3 #s1RightBtn7 {
+  position: absolute;
+  top: 30%;
+  right: 0%;
+  font-size: 3em;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  color: #000;
+}
+main #tshirt3 h6 {
+  color: green;
+  text-align: center;
+  font-weight: bold;
+}
+main #tshirt3 .new {
+  text-decoration: none;
+  color: #000;
+}
+main #tshirt3 .rating {
+  text-align: center;
+}
+main #tshirt3 .rating p {
+  font-size: 1em;
+}
+main #watch {
+  background: white;
+  width: 400px;
+  position: relative;
+  margin: 30px 0;
+}
+main #watch #image {
+  width: 300px;
+  height: 350px;
+  margin: 20px auto;
+  display: block;
+}
+main #watch #s1LeftBtn8 {
+  position: absolute;
+  top: 30%;
+  font-size: 3em;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  color: #000;
+}
+main #watch h3 {
+  padding: 0 20px;
+}
+main #watch #buy8 {
+  background: gold;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  margin: 10px auto;
+  padding: 10px 30px;
+  font-size: 1em;
+  display: block;
+}
+main #watch #s1RightBtn8 {
+  position: absolute;
+  top: 30%;
+  right: 0%;
+  font-size: 3em;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  color: #000;
+}
+main #watch .small {
+  font-size: 0.6em;
+}
+main #watch .new {
+  text-decoration: none;
+  color: #000;
+}
+main #watch .rating {
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+  align-items: center;
+  font-weight: bold;
+}
+main #watch .rating img {
+  width: 70px;
+  object-fit: cover;
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+footer span {
+  position: relative;
+  font-size: 2em;
+  font-weight: bold;
+  animation: heart 5s ease-in-out 0.1s infinite alternate;
+}
+footer .soc-links {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 5px;
+}
+@keyframes heart {
+  0% {
+    color: crimson;
+    filter: drop-shadow(0 0px 1px red);
+  }
+  25% {
+    color: crimson;
+    filter: drop-shadow(1px -3px 1px red);
+  }
+  50% {
+    color: crimson;
+    filter: drop-shadow(3px -6px 1px red);
+  }
+  75% {
+    color: crimson;
+    filter: drop-shadow(5px -9px 1px red);
+  }
+  100% {
+    color: crimson;
+    filter: drop-shadow(7px -12px 1px red);
+  }
+}
+footer .fa-facebook:hover {
+  font-size: 1.7em;
+  color: #0072ff;
+  transition: all 1s;
+}
+footer .fa-instagram:hover {
+  font-size: 1.7em;
+  color: #fd1d1d;
+  filter: drop-shadow(0 0 1px #fcb045);
+  transition: all 1s;
+}
+footer .fa-youtube:hover {
+  font-size: 1.7em;
+  color: crimson;
+  transition: all 1s;
+}
+footer .fa-linkedin:hover {
+  font-size: 1.7em;
+  color: #021b79;
+  transition: all 1s;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 688px) {
+  header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  header img {
+    width: 200px;
+  }
+  header .navigation {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.2);
+    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  }
+  header .navigation li {
+    display: none;
+    margin: 25px;
+    font-size: 0.8em;
+  }
+  header label {
+    display: block;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    margin-right: 1.5ch;
+  }
+  header #toggle:checked + .navigation li {
+    display: block;
+    animation: oj 0.9s linear 0.1s;
+  }
+  @keyframes oj {
+    from {
+      opacity: 0;
+      transform: translateY(-100px) rotateZ(360deg) scale(0);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px) rotateZ(0) scale(1);
+    }
+  }
+  header .fa-shopping-cart {
+    display: block;
+    margin: 20px auto;
+  }
+  .home-limited {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .home-limited #time {
+    margin-top: 15px;
+  }
+  main {
+    padding: 10px;
+  }
+  main .rate {
+    padding: 3px;
+    border: 1px solid green;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+  }
+  main #saree1 {
+    width: 300px;
+  }
+  main #saree1 #image {
+    width: 150px;
+    height: 250px;
+  }
+  main #saree1 .new {
+    font-size: 0.5em;
+  }
+  main #saree1 .rating {
+    margin: 10px 0;
+  }
+  main #saree1 .rating img {
+    width: 40px;
+    object-fit: cover;
+  }
+  main #saree2 {
+    width: 300px;
+  }
+  main #saree2 #image {
+    width: 150px;
+    height: 250px;
+  }
+  main #saree2 .new {
+    font-size: 0.5em;
+  }
+  main #saree2 .rating {
+    margin: 10px 0;
+  }
+  main #saree2 .rating img {
+    width: 40px;
+    object-fit: cover;
+  }
+  main #saree3 {
+    width: 300px;
+  }
+  main #saree3 #image {
+    width: 150px;
+    height: 250px;
+  }
+  main #saree3 .new {
+    font-size: 0.5em;
+  }
+  main #saree3 .rating {
+    margin: 10px 0;
+  }
+  main #saree3 .rating img {
+    width: 40px;
+    object-fit: cover;
+  }
+  main #saree4 {
+    width: 300px;
+  }
+  main #saree4 #image {
+    width: 150px;
+    height: 250px;
+  }
+  main #saree4 .new {
+    font-size: 0.5em;
+  }
+  main #saree4 p {
+    padding: 10px;
+    font-size: 1.5em;
+  }
+  main #tshirt {
+    width: 300px;
+  }
+  main #tshirt #image {
+    width: 150px;
+    height: 250px;
+  }
+  main #tshirt .new {
+    font-size: 0.5em;
+  }
+  main #tshirt p {
+    padding: 10px;
+    font-size: 1.5em;
+  }
+  main #tshirt1 {
+    width: 300px;
+  }
+  main #tshirt1 #image {
+    width: 200px;
+    height: 250px;
+  }
+  main #tshirt1 .new {
+    font-size: 0.5em;
+  }
+  main #tshirt1 .rating {
+    margin: 10px 0;
+  }
+  main #tshirt1 .rating img {
+    width: 40px;
+    object-fit: cover;
+  }
+  main #tshirt2 {
+    width: 300px;
+  }
+  main #tshirt2 #image {
+    width: 100px;
+    height: 250px;
+  }
+  main #tshirt2 .new {
+    font-size: 0.5em;
+  }
+  main #tshirt2 .rating {
+    margin: 10px 0;
+  }
+  main #tshirt2 .rating img {
+    width: 40px;
+    object-fit: cover;
+  }
+  main #tshirt3 {
+    width: 300px;
+  }
+  main #tshirt3 #image {
+    width: 200px;
+    height: 250px;
+  }
+  main #tshirt3 .new {
+    font-size: 0.5em;
+  }
+  main #tshirt3 p {
+    padding: 10px;
+    font-size: 1.5em;
+  }
+  main #watch {
+    width: 300px;
+  }
+  main #watch #image {
+    width: 200px;
+    height: 250px;
+  }
+  main #watch .new {
+    font-size: 0.5em;
+  }
+  main #watch .rating {
+    margin: 10px 0;
+  }
+  main #watch .rating img {
+    width: 40px;
+    object-fit: cover;
+  }
+  footer {
+    font-size: 0.7em;
+    display: flex;
+    flex-direction: column;
+    height: 17ch;
+  }
+}
+@media only screen and (min-width: 689px) and (max-width: 1024px) {
+  header {
+    font-size: 0.73em;
+  }
+  header img {
+    width: 100px;
+  }
+  header .fa-shopping-cart {
+    font-size: 1.5em;
+  }
+  footer {
+    font-size: 0.7em;
+  }
+}

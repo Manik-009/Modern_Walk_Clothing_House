@@ -1,0 +1,3075 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Code Pro", monospace, arial, helvetica, cursive;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.7em;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  color: #000;
+}
+
+::-webkit-scrollbar {
+  background-color: red;
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  width: 5px;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  border-radius: 30px;
+  background: linear-gradient(to top, #232526, #414345);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  text-transform: uppercase;
+}
+header img {
+  width: 170px;
+  align-self: flex-start;
+  position: relative;
+  animation: logo 0.5s linear 0.1s forwards;
+}
+header img:hover {
+  filter: drop-shadow(0 5px 1px silver);
+}
+@keyframes logo {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+header .navigation {
+  list-style: none;
+  position: relative;
+  animation: li 0.9s linear 0.1s forwards;
+}
+@keyframes li {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+header .navigation #active, header .navigation .links {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+header .navigation .links {
+  transition: all 0.5s;
+  position: relative;
+}
+header .navigation .links:hover {
+  text-shadow: 0 0 0 #000;
+}
+header .navigation .links::after {
+  content: "★";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  display: none;
+}
+header .navigation .links:hover::after {
+  display: block;
+  position: absolute;
+  left: 35%;
+  bottom: 20%;
+  animation: star 0.7s ease;
+  filter: drop-shadow(2px 2px 0px silver);
+}
+@keyframes star {
+  0% {
+    opacity: 0;
+    transform: translateX(-1.5vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+header .navigation #active {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+header .navigation li {
+  display: inline;
+  margin: 0 3vw;
+}
+header label {
+  display: none;
+  font-size: 2em;
+  float: right;
+  width: 26px;
+}
+header #toggle {
+  display: none;
+  clear: right;
+}
+header .fa-shopping-cart {
+  margin-right: 50px;
+  font-size: 1.5em;
+  position: relative;
+  animation: cart 1s ease 0.1s;
+  cursor: pointer;
+}
+@keyframes cart {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.img-slider {
+  width: 100%;
+  margin-top: 1em;
+  height: 45ch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  animation: anima 1.5s ease 0.1s;
+}
+.img-slider > img {
+  filter: drop-shadow(-3px -3px 3px black);
+  cursor: pointer;
+}
+.img-slider > img:hover {
+  opacity: 1;
+  transform: translateY(-1vw);
+  transition: all 1s;
+  filter: drop-shadow(3px 3px 3px black);
+}
+.img-slider .small {
+  width: 10vw;
+  height: 20ch;
+  opacity: 0.5;
+}
+.img-slider #big {
+  width: 25vw;
+  height: 50ch;
+  transform: none;
+  filter: drop-shadow(7px 7px 7px black);
+}
+.img-slider .small2 {
+  width: 15vw;
+  height: 30ch;
+  opacity: 0.7;
+}
+.img-slider .small3 {
+  width: 7vw;
+  height: 10ch;
+  opacity: 0.3;
+}
+@keyframes anima {
+  0% {
+    transform: translateX(-100vw);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+#back2top {
+  font-size: 2em;
+  width: 45px;
+  height: 45px;
+  padding: 5px 5px 10px 5px;
+  background: grey;
+  text-align: center;
+  position: fixed;
+  bottom: 7.5%;
+  right: 4%;
+  z-index: 100;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+#back2top a {
+  text-decoration: none;
+  color: #fff;
+}
+#back2top a:hover {
+  filter: drop-shadow(0 0 2px #fff);
+}
+
+#men-acc {
+  margin-top: 7em;
+  position: relative;
+}
+#men-acc h2 {
+  text-align: center;
+  padding: 15px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #000;
+  text-shadow: 0 0 0 #000;
+  box-shadow: 0 5px 5px grey;
+}
+#men-acc img {
+  width: 150px;
+  height: 250px;
+  padding: 10px;
+  cursor: pointer;
+  object-fit: contain;
+}
+#men-acc img:hover {
+  transform: scale(1.07);
+  transition: transform 0.5s;
+}
+#men-acc h3 {
+  text-shadow: 0 0 0 #000;
+  margin-left: 15px;
+  cursor: pointer;
+  width: 170px;
+}
+#men-acc .price {
+  font-weight: bold;
+  font-size: 0.9em;
+}
+#men-acc .price > span {
+  text-decoration: line-through;
+  font-size: 0.8em;
+}
+#men-acc .off {
+  color: seagreen;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+#men-acc .special {
+  color: green;
+  font-weight: bold;
+  font-size: 0.6em;
+}
+#men-acc .item-left {
+  font-size: 0.7em;
+  color: red;
+  font-weight: bold;
+}
+#men-acc .item-cart {
+  background-color: orangered;
+  padding: 10px;
+  border: none;
+  margin: 10px 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  cursor: pointer;
+}
+#men-acc .item-buy {
+  background-color: orange;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  cursor: pointer;
+}
+@keyframes afterclick {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes Elseafterclick {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#men-acc .wish-list {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #e6e6e6;
+  font-size: 1.5em;
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  transition: all 1s;
+}
+#men-acc .wish-list:before {
+  display: none;
+  content: "Add to Wish-List";
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  width: 16ch;
+  position: absolute;
+  top: -50%;
+  padding: 2px 0 8px 0;
+  right: 0%;
+  font-size: 0.5em;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+#men-acc .wish-list:hover::before {
+  display: block;
+}
+@keyframes shake {
+  0% {
+    transform: skew(0);
+  }
+  25% {
+    transform: skew(5deg);
+  }
+  50% {
+    transform: skew(-5deg);
+  }
+  75% {
+    transform: skew(5deg);
+  }
+  100% {
+    transform: skew(-5deg);
+  }
+}
+#men-acc .watches {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 3em 35px 2em 35px;
+  gap: 3em;
+  align-items: flex-start;
+}
+#men-acc .watches > div {
+  margin-top: 5ch;
+}
+#men-acc .watches #watch1 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#men-acc .watches #watch1 #left-btn {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .watches #watch1 #right-btn {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .watches #watch1 #total {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .watches #watch2 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#men-acc .watches #watch2 #left-btn1 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .watches #watch2 #right-btn1 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .watches #watch2 #total1 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .watches #watch3 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#men-acc .watches #watch3 #left-btn2 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .watches #watch3 #right-btn2 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .watches #watch3 #total2 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 40px 0 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .watches #watch4 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#men-acc .watches #watch4 #left-btn3 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .watches #watch4 #right-btn3 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .watches #watch4 #total3 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 40px 0 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .watches #watch5 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#men-acc .watches #watch5 #left-btn4 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .watches #watch5 #right-btn4 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .watches #watch5 #total4 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .watches #watch6 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#men-acc .watches #watch6 #left-btn5 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .watches #watch6 #right-btn5 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .watches #watch6 #total5 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 40px 0 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .watches #watch7 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#men-acc .watches #watch7 #left-btn6 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .watches #watch7 #right-btn6 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .watches #watch7 #total6 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .watches #watch8 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#men-acc .watches #watch8 #left-btn7 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .watches #watch8 #right-btn7 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .watches #watch8 #total7 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 40px 0 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .watches #watch9 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#men-acc .watches #watch9 #left-btn8 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .watches #watch9 #right-btn8 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .watches #watch9 #total8 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 40px 0 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .backpack {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 2em 35px;
+  gap: 3em;
+  align-items: flex-start;
+}
+#men-acc .backpack .capacity {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-shadow: 0 0 0 #000;
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 0.65em;
+}
+#men-acc .backpack .capacity .litre {
+  border: 1px solid lightgrey;
+  padding: 0 10px;
+  cursor: pointer;
+}
+#men-acc .backpack .capacity .litre:hover {
+  border: 1px solid silver;
+}
+#men-acc .backpack > div {
+  margin-top: 5ch;
+}
+#men-acc .backpack #backpack1 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 580px;
+  text-align: center;
+  display: none;
+}
+#men-acc .backpack #backpack1 #left-bpbtn {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .backpack #backpack1 #right-bpbtn {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .backpack #backpack1 #total-bp {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .backpack #backpack2 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 580px;
+  text-align: center;
+  display: none;
+}
+#men-acc .backpack #backpack2 #left-bpbtn1 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .backpack #backpack2 #right-bpbtn1 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .backpack #backpack2 #total-bp1 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 35px 0 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .backpack #backpack3 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 580px;
+  text-align: center;
+  display: none;
+}
+#men-acc .backpack #backpack3 #left-bpbtn2 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .backpack #backpack3 #right-bpbtn2 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .backpack #backpack3 #total-bp2 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 35px 0 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .backpack #backpack4 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 580px;
+  text-align: center;
+  display: none;
+}
+#men-acc .backpack #backpack4 #left-bpbtn3 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .backpack #backpack4 #right-bpbtn3 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .backpack #backpack4 #total-bp3 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 35px 0 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .backpack #backpack5 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 580px;
+  text-align: center;
+  display: none;
+}
+#men-acc .backpack #backpack5 #left-bpbtn4 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .backpack #backpack5 #right-bpbtn4 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .backpack #backpack5 #total-bp4 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 35px 0 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .wallet {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 2em 35px;
+  gap: 3em;
+  align-items: flex-start;
+}
+#men-acc .wallet > div {
+  margin-top: 5ch;
+}
+#men-acc .wallet img {
+  width: 250px;
+}
+#men-acc .wallet #wallet1 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 550px;
+  text-align: center;
+  display: none;
+}
+#men-acc .wallet #wallet1 #left-wlbtn {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .wallet #wallet1 #right-wlbtn {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .wallet #wallet1 #total-wl {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .wallet #wallet2 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 550px;
+  text-align: center;
+  display: none;
+}
+#men-acc .wallet #wallet2 #left-wlbtn1 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .wallet #wallet2 #right-wlbtn1 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .wallet #wallet2 #total-wl1 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .wallet #wallet3 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 550px;
+  text-align: center;
+  display: none;
+}
+#men-acc .wallet #wallet3 #left-wlbtn2 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .wallet #wallet3 #right-wlbtn2 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .wallet #wallet3 #total-wl2 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 35px 0 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .wallet #wallet4 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 550px;
+  text-align: center;
+  display: none;
+}
+#men-acc .wallet #wallet4 #left-wlbtn3 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .wallet #wallet4 #right-wlbtn3 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .wallet #wallet4 #total-wl3 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .belt {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 2em 35px;
+  gap: 3em;
+  align-items: flex-start;
+}
+#men-acc .belt .wsize {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-shadow: 0 0 0 #000;
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 0.65em;
+}
+#men-acc .belt .wsize .one-size {
+  border: 1px solid lightgrey;
+  padding: 0 10px;
+  cursor: pointer;
+}
+#men-acc .belt .wsize .one-size:hover {
+  border: 1px solid silver;
+}
+#men-acc .belt > div {
+  margin-top: 5ch;
+}
+#men-acc .belt img {
+  width: 250px;
+}
+#men-acc .belt #belt1 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 570px;
+  text-align: center;
+  display: none;
+}
+#men-acc .belt #belt1 #left-belbtn {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .belt #belt1 #right-belbtn {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .belt #belt1 #total-bel {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .belt #belt2 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 570px;
+  text-align: center;
+  display: none;
+}
+#men-acc .belt #belt2 #left-belbtn1 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .belt #belt2 #right-belbtn1 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .belt #belt2 #total-bel1 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .belt #belt3 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 570px;
+  text-align: center;
+  display: none;
+}
+#men-acc .belt #belt3 #left-belbtn2 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .belt #belt3 #right-belbtn2 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .belt #belt3 #total-bel2 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 35px 0 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .belt #belt4 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 570px;
+  text-align: center;
+  display: none;
+}
+#men-acc .belt #belt4 #left-belbtn3 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .belt #belt4 #right-belbtn3 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .belt #belt4 #total-bel3 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .sunglasses {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 2em 35px;
+  gap: 3em;
+  align-items: flex-start;
+}
+#men-acc .sunglasses .sgsize {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-shadow: 0 0 0 #000;
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 0.65em;
+}
+#men-acc .sunglasses .sgsize .size-chart {
+  border: 1px solid lightgrey;
+  padding: 0 10px;
+  cursor: pointer;
+}
+#men-acc .sunglasses .sgsize .size-chart:hover {
+  border: 1px solid silver;
+}
+#men-acc .sunglasses > div {
+  margin-top: 5ch;
+}
+#men-acc .sunglasses img {
+  width: 230px;
+}
+#men-acc .sunglasses #sunglasses1 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 600px;
+  text-align: center;
+  display: none;
+}
+#men-acc .sunglasses #sunglasses1 #left-sgbtn {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .sunglasses #sunglasses1 #right-sgbtn {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .sunglasses #sunglasses1 #total-sg {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 35px 0 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .sunglasses #sunglasses2 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 600px;
+  text-align: center;
+  display: none;
+}
+#men-acc .sunglasses #sunglasses2 #left-sgbtn1 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .sunglasses #sunglasses2 #right-sgbtn1 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .sunglasses #sunglasses2 #total-sg1 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .sunglasses #sunglasses3 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 600px;
+  text-align: center;
+  display: none;
+}
+#men-acc .sunglasses #sunglasses3 #left-sgbtn2 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .sunglasses #sunglasses3 #right-sgbtn2 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .sunglasses #sunglasses3 #total-sg2 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .sunglasses #sunglasses4 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 600px;
+  text-align: center;
+  display: none;
+}
+#men-acc .sunglasses #sunglasses4 #left-sgbtn3 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .sunglasses #sunglasses4 #right-sgbtn3 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .sunglasses #sunglasses4 #total-sg3 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 35px 0 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .sunglasses #sunglasses5 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 600px;
+  text-align: center;
+  display: none;
+}
+#men-acc .sunglasses #sunglasses5 #left-sgbtn4 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .sunglasses #sunglasses5 #right-sgbtn4 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .sunglasses #sunglasses5 #total-sg4 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .sunglasses #sunglasses6 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 600px;
+  text-align: center;
+  display: none;
+}
+#men-acc .sunglasses #sunglasses6 #left-sgbtn5 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .sunglasses #sunglasses6 #right-sgbtn5 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .sunglasses #sunglasses6 #total-sg5 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 35px 0 10px 0;
+  font-size: 0.8em;
+}
+#men-acc .sunglasses #sunglasses7 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 600px;
+  text-align: center;
+  display: none;
+}
+#men-acc .sunglasses #sunglasses7 #left-sgbtn6 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#men-acc .sunglasses #sunglasses7 #right-sgbtn6 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#men-acc .sunglasses #sunglasses7 #total-sg6 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+
+#women-acc {
+  margin-top: 7em;
+  position: relative;
+}
+#women-acc h2 {
+  text-align: center;
+  padding: 15px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #000;
+  box-shadow: 0 5px 5px grey;
+  text-shadow: 0 0 0 #000;
+}
+#women-acc img {
+  width: 200px;
+  height: 250px;
+  object-fit: contain;
+  padding: 10px;
+  cursor: pointer;
+}
+#women-acc img:hover {
+  transform: scale(1.07);
+  transition: transform 0.5s;
+}
+#women-acc h3 {
+  text-shadow: 0 0 0 #000;
+  margin-left: 15px;
+  cursor: pointer;
+  width: 170px;
+}
+#women-acc .price {
+  font-weight: bold;
+  font-size: 0.9em;
+}
+#women-acc .price > span {
+  text-decoration: line-through;
+  font-size: 0.8em;
+}
+#women-acc .off {
+  color: seagreen;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+#women-acc .special {
+  color: green;
+  font-weight: bold;
+  font-size: 0.6em;
+}
+#women-acc .item-left {
+  font-size: 0.7em;
+  color: red;
+  font-weight: bold;
+}
+#women-acc .item-cart {
+  background-color: orangered;
+  padding: 10px;
+  border: none;
+  margin: 10px 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  cursor: pointer;
+}
+#women-acc .item-buy {
+  background-color: orange;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  cursor: pointer;
+}
+@keyframes afterclick {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes Elseafterclick {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#women-acc .wish-list {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #e6e6e6;
+  font-size: 1.5em;
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  transition: all 1s;
+}
+#women-acc .wish-list:before {
+  display: none;
+  content: "Add to Wish-List";
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  width: 16ch;
+  position: absolute;
+  top: -50%;
+  padding: 2px 0 8px 0;
+  right: 0%;
+  font-size: 0.5em;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+#women-acc .wish-list:hover::before {
+  display: block;
+}
+@keyframes shake {
+  0% {
+    transform: skew(0);
+  }
+  25% {
+    transform: skew(5deg);
+  }
+  50% {
+    transform: skew(-5deg);
+  }
+  75% {
+    transform: skew(5deg);
+  }
+  100% {
+    transform: skew(-5deg);
+  }
+}
+#women-acc .women-watches {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 3em 35px 2em 35px;
+  gap: 3em;
+  align-items: flex-start;
+}
+#women-acc .women-watches > div {
+  margin-top: 5ch;
+}
+#women-acc .women-watches #wWatch1 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-watches #wWatch1 #wleft-btn {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-watches #wWatch1 #wright-btn {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-watches #wWatch1 #wtotal {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-watches #wWatch2 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-watches #wWatch2 #wleft-btn1 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-watches #wWatch2 #wright-btn1 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-watches #wWatch2 #wtotal1 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 35px 0 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-watches #wWatch3 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-watches #wWatch3 #wleft-btn2 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-watches #wWatch3 #wright-btn2 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-watches #wWatch3 #wtotal2 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 35px 0 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-watches #wWatch4 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-watches #wWatch4 #wleft-btn3 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-watches #wWatch4 #wright-btn3 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-watches #wWatch4 #wtotal3 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-watches #wWatch5 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-watches #wWatch5 #wleft-btn4 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-watches #wWatch5 #wright-btn4 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-watches #wWatch5 #wtotal4 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-watches #wWatch6 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-watches #wWatch6 #wleft-btn5 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-watches #wWatch6 #wright-btn5 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-watches #wWatch6 #wtotal5 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 35px 0 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-watches #wWatch7 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-watches #wWatch7 #wleft-btn6 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-watches #wWatch7 #wright-btn6 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-watches #wWatch7 #wtotal6 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-watches #wWatch8 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-watches #wWatch8 #wleft-btn7 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-watches #wWatch8 #wright-btn7 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-watches #wWatch8 #wtotal7 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 35px 0 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-bag {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 2em 35px;
+  gap: 3em;
+  align-items: flex-start;
+}
+#women-acc .women-bag > div {
+  margin-top: 5ch;
+}
+#women-acc .women-bag #bag-h3 {
+  width: 370px;
+}
+#women-acc .women-bag #bag1 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-bag #bag1 #bagleft-btn {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-bag #bag1 #bagright-btn {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-bag #bag1 #bagtotal {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-bag #bag2 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-bag #bag2 #bagleft-btn1 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-bag #bag2 #bagright-btn1 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-bag #bag2 #bagtotal1 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-bag #bag3 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-bag #bag3 #bagleft-btn2 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-bag #bag3 #bagright-btn2 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-bag #bag3 #bagtotal2 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-bag #bag4 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-bag #bag4 #bagleft-btn3 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-bag #bag4 #bagright-btn3 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-bag #bag4 #bagtotal3 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-bag #bag5 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-bag #bag5 #bagleft-btn4 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-bag #bag5 #bagright-btn4 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-bag #bag5 #bagtotal4 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-bag #bag6 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-bag #bag6 #bagleft-btn5 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-bag #bag6 #bagright-btn5 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-bag #bag6 #bagtotal5 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 35px 0 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-bag #bag7 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-bag #bag7 #bagleft-btn6 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-bag #bag7 #bagright-btn6 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-bag #bag7 #bagtotal6 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-wallet {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 2em 35px;
+  gap: 3em;
+  align-items: flex-start;
+}
+#women-acc .women-wallet > div {
+  margin-top: 5ch;
+}
+#women-acc .women-wallet #wwallet1 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-wallet #wwallet1 #walleft-btn {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-wallet #wwallet1 #walright-btn {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-wallet #wwallet1 #waltotal {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 35px 0 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-wallet #wwallet2 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-wallet #wwallet2 #walleft-btn1 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-wallet #wwallet2 #walright-btn1 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-wallet #wwallet2 #waltotal1 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-wallet #wwallet3 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-wallet #wwallet3 #walleft-btn2 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-wallet #wwallet3 #walright-btn2 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-wallet #wwallet3 #waltotal2 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 35px 0 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-wallet #wwallet4 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-wallet #wwallet4 #walleft-btn3 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-wallet #wwallet4 #walright-btn3 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-wallet #wwallet4 #waltotal3 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-wallet #wwallet5 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-wallet #wwallet5 #walleft-btn4 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-wallet #wwallet5 #walright-btn4 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-wallet #wwallet5 #waltotal4 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-wallet #wwallet6 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-wallet #wwallet6 #walleft-btn5 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-wallet #wwallet6 #walright-btn5 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-wallet #wwallet6 #waltotal5 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 35px 0 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-wallet #wwallet7 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 530px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-wallet #wwallet7 #walleft-btn6 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-wallet #wwallet7 #walright-btn6 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-wallet #wwallet7 #waltotal6 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 35px 0 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-sunglasses {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 2em 35px;
+  gap: 3em;
+  align-items: flex-start;
+}
+#women-acc .women-sunglasses .sgsize {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-shadow: 0 0 0 #000;
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 0.65em;
+}
+#women-acc .women-sunglasses .sgsize .size-chart {
+  border: 1px solid lightgrey;
+  padding: 0 10px;
+  cursor: pointer;
+}
+#women-acc .women-sunglasses .sgsize .size-chart:hover {
+  border: 1px solid silver;
+}
+#women-acc .women-sunglasses > div {
+  margin-top: 5ch;
+}
+#women-acc .women-sunglasses #wsunglasses1 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 620px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-sunglasses #wsunglasses1 #wsgleft-btn {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-sunglasses #wsunglasses1 #wsgright-btn {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-sunglasses #wsunglasses1 #wsgtotal {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-sunglasses #wsunglasses2 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 620px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-sunglasses #wsunglasses2 #wsgleft-btn1 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-sunglasses #wsunglasses2 #wsgright-btn1 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-sunglasses #wsunglasses2 #wsgtotal1 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-sunglasses #wsunglasses3 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 620px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-sunglasses #wsunglasses3 #wsgleft-btn2 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-sunglasses #wsunglasses3 #wsgright-btn2 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-sunglasses #wsunglasses3 #wsgtotal2 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 65px 0 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-sunglasses #wsunglasses4 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 620px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-sunglasses #wsunglasses4 #wsgleft-btn3 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-sunglasses #wsunglasses4 #wsgright-btn3 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-sunglasses #wsunglasses4 #wsgtotal3 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 65px 0 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-sunglasses #wsunglasses5 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 620px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-sunglasses #wsunglasses5 #wsgleft-btn4 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-sunglasses #wsunglasses5 #wsgright-btn4 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-sunglasses #wsunglasses5 #wsgtotal4 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 65px 0 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-sunglasses #wsunglasses6 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 620px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-sunglasses #wsunglasses6 #wsgleft-btn5 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-sunglasses #wsunglasses6 #wsgright-btn5 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-sunglasses #wsunglasses6 #wsgtotal5 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-sunglasses #wsunglasses7 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 620px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-sunglasses #wsunglasses7 #wsgleft-btn6 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-sunglasses #wsunglasses7 #wsgright-btn6 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-sunglasses #wsunglasses7 #wsgtotal6 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 35px 0 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-sunglasses #wsunglasses8 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 620px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-sunglasses #wsunglasses8 #wsgleft-btn7 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-sunglasses #wsunglasses8 #wsgright-btn7 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-sunglasses #wsunglasses8 #wsgtotal7 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 60px 0 10px 0;
+  font-size: 0.8em;
+}
+#women-acc .women-sunglasses #wsunglasses9 {
+  width: 300px;
+  position: relative;
+  background: white;
+  filter: drop-shadow(0 0 5px lightgrey);
+  height: 620px;
+  text-align: center;
+  display: none;
+}
+#women-acc .women-sunglasses #wsunglasses9 #wsgleft-btn8 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+#women-acc .women-sunglasses #wsunglasses9 #wsgright-btn8 {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  position: absolute;
+  top: 15%;
+  right: 2%;
+}
+#women-acc .women-sunglasses #wsunglasses9 #wsgtotal8 {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  margin: 35px 0 10px 0;
+  font-size: 0.8em;
+}
+
+footer {
+  margin-top: 5vh;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(to right, #232526, #414345);
+  color: #fff;
+  word-spacing: 0px;
+  letter-spacing: 1px;
+}
+footer img {
+  width: 150px;
+  filter: drop-shadow(2px 2px 5px white);
+  margin: 0 auto;
+  display: block;
+}
+@keyframes phone {
+  0% {
+    color: yellowgreen;
+    filter: drop-shadow(0 0 10px yellowgreen);
+  }
+  10% {
+    color: tomato;
+    filter: drop-shadow(0 0 10px tomato);
+  }
+  20% {
+    color: cyan;
+    filter: drop-shadow(0 0 10px cyan);
+  }
+  30% {
+    color: yellow;
+    filter: drop-shadow(0 0 10px yellow);
+  }
+  40% {
+    color: hotpink;
+    filter: drop-shadow(0 0 10px hotpink);
+  }
+  50% {
+    color: maroon;
+    filter: drop-shadow(0 0 10px maroon);
+  }
+  60% {
+    color: white;
+    filter: drop-shadow(0 0 10px white);
+  }
+  70% {
+    color: blue;
+    filter: drop-shadow(0 0 10px blue);
+  }
+  80% {
+    color: magenta;
+    filter: drop-shadow(0 0 10px magenta);
+  }
+  90% {
+    color: crimson;
+    filter: drop-shadow(0 0 10px crimson);
+  }
+  100% {
+    color: cadetblue;
+    filter: drop-shadow(0 0 10px cadetblue);
+  }
+}
+@keyframes mail {
+  100% {
+    color: yellowgreen;
+    filter: drop-shadow(0 0 10px yellowgreen);
+  }
+  90% {
+    color: tomato;
+    filter: drop-shadow(0 0 10px tomato);
+  }
+  80% {
+    color: cyan;
+    filter: drop-shadow(0 0 10px cyan);
+  }
+  70% {
+    color: yellow;
+    filter: drop-shadow(0 0 10px yellow);
+  }
+  60% {
+    color: hotpink;
+    filter: drop-shadow(0 0 10px hotpink);
+  }
+  50% {
+    color: maroon;
+    filter: drop-shadow(0 0 10px maroon);
+  }
+  40% {
+    color: white;
+    filter: drop-shadow(0 0 10px white);
+  }
+  30% {
+    color: blue;
+    filter: drop-shadow(0 0 10px blue);
+  }
+  20% {
+    color: magenta;
+    filter: drop-shadow(0 0 10px magenta);
+  }
+  10% {
+    color: crimson;
+    filter: drop-shadow(0 0 10px crimson);
+  }
+  0% {
+    color: cadetblue;
+    filter: drop-shadow(0 0 10px cadetblue);
+  }
+}
+@keyframes map {
+  0% {
+    color: yellowgreen;
+    filter: drop-shadow(0 0 10px yellowgreen);
+  }
+  10% {
+    color: tomato;
+    filter: drop-shadow(0 0 10px tomato);
+  }
+  20% {
+    color: cyan;
+    filter: drop-shadow(0 0 10px cyan);
+  }
+  30% {
+    color: yellow;
+    filter: drop-shadow(0 0 10px yellow);
+  }
+  40% {
+    color: hotpink;
+    filter: drop-shadow(0 0 10px hotpink);
+  }
+  50% {
+    color: maroon;
+    filter: drop-shadow(0 0 10px maroon);
+  }
+  60% {
+    color: white;
+    filter: drop-shadow(0 0 10px white);
+  }
+  70% {
+    color: blue;
+    filter: drop-shadow(0 0 10px blue);
+  }
+  80% {
+    color: magenta;
+    filter: drop-shadow(0 0 10px magenta);
+  }
+  90% {
+    color: crimson;
+    filter: drop-shadow(0 0 10px crimson);
+  }
+  100% {
+    color: cadetblue;
+    filter: drop-shadow(0 0 10px cadetblue);
+  }
+}
+footer .copyright .soc-links, footer #location .location, footer #email .email, footer #phno .phone {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 5px;
+}
+footer #phno {
+  display: flex;
+  margin: 20px;
+}
+footer #email {
+  margin: 20px;
+  display: flex;
+}
+footer #location {
+  display: flex;
+  margin: 20px;
+  letter-spacing: 0px;
+}
+footer .section1 {
+  flex: 20%;
+}
+footer .copyright {
+  background: #000;
+  display: flex;
+  margin-top: 30px;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .copyright span {
+  position: relative;
+  font-size: 2em;
+  font-weight: bold;
+  animation: heart 5s ease-in-out 0.1s infinite alternate;
+}
+@keyframes heart {
+  0% {
+    color: crimson;
+    filter: drop-shadow(0 0px 1px red);
+  }
+  25% {
+    color: crimson;
+    filter: drop-shadow(1px -3px 1px red);
+  }
+  50% {
+    color: crimson;
+    filter: drop-shadow(3px -6px 1px red);
+  }
+  75% {
+    color: crimson;
+    filter: drop-shadow(5px -9px 1px red);
+  }
+  100% {
+    color: crimson;
+    filter: drop-shadow(7px -12px 1px red);
+  }
+}
+footer .copyright .fa-facebook:hover {
+  font-size: 1em;
+  color: #0072ff;
+  transition: all 1s;
+}
+footer .copyright .fa-instagram:hover {
+  font-size: 1em;
+  color: #fd1d1d;
+  filter: drop-shadow(0 0 1px #fcb045);
+  transition: all 1s;
+}
+footer .copyright .fa-youtube:hover {
+  font-size: 1em;
+  color: crimson;
+  transition: all 1s;
+}
+footer .copyright .fa-linkedin:hover {
+  font-size: 1em;
+  color: #021b79;
+  transition: all 1s;
+}
+footer #slogan {
+  flex: 30%;
+  font-weight: bold;
+  margin: 0 20px;
+}
+footer #slogan::first-letter {
+  font-size: 1.7em;
+}
+footer #offers {
+  flex: 10%;
+  align-self: flex-start;
+  text-align: center;
+}
+footer #offers h5 {
+  font-size: 0.9em;
+  margin: 0 auto;
+  font-variant: small-caps;
+  width: 12ch;
+  border-bottom: 2px solid #fff;
+}
+footer #offers .ofr-links {
+  text-decoration: none;
+  position: relative;
+  font-weight: bold;
+  color: #fff;
+  font-size: 0.7em;
+  padding: 5px 0;
+}
+footer #offers .ofr-links:hover {
+  color: red;
+}
+footer #offers .ofr-links::after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  background: teal;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+footer #offers .ofr-links::before {
+  content: "";
+  width: 0px;
+  height: 2px;
+  background: crimson;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+footer #offers .ofr-links:hover::before {
+  width: 10ch;
+  filter: drop-shadow(0 0 2px crimson);
+  transition: width 2s;
+}
+footer #offers .ofr-links:hover::after {
+  width: 9.5ch;
+  filter: drop-shadow(0 0 2px teal);
+  transition: width 2s;
+}
+footer .footer-cont {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 689px) and (max-width: 1024px) {
+  header {
+    font-size: 0.73em;
+  }
+  header img {
+    width: 100px;
+  }
+  header .fa-shopping-cart {
+    font-size: 1.5em;
+  }
+  .img-slider {
+    margin-top: 5ch;
+    height: 35ch;
+  }
+  .img-slider .small {
+    width: 10vw;
+    height: 15ch;
+    opacity: 0.5;
+  }
+  .img-slider #big {
+    width: 30vw;
+    height: 35ch;
+    transform: none;
+    filter: drop-shadow(7px 7px 7px black);
+  }
+  .img-slider .small2 {
+    width: 15vw;
+    height: 20ch;
+    opacity: 0.7;
+  }
+  .img-slider .small3 {
+    width: 5vw;
+    height: 10ch;
+    opacity: 0.3;
+  }
+  footer {
+    font-size: 0.7em;
+  }
+  footer .footer-content {
+    flex-wrap: wrap;
+  }
+  footer #offers h5 {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 688px) {
+  header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  header img {
+    width: 150px;
+  }
+  header .navigation {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  header .navigation li {
+    display: none;
+    margin: 25px;
+    font-size: 0.8em;
+  }
+  header label {
+    display: block;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    margin-right: 1.5ch;
+  }
+  header #toggle:checked + .navigation li {
+    display: block;
+    animation: oj 0.7s linear 0s;
+  }
+  @keyframes oj {
+    0% {
+      opacity: 0;
+      transform: translateX(-200px) skew(0deg) scale(0);
+    }
+    50% {
+      opacity: 0;
+      transform: translateX(-100px) scale(0.5) skew(90deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px) scale(1) skew(0deg);
+    }
+  }
+  header .fa-shopping-cart {
+    display: block;
+    margin: 20px auto;
+  }
+  .img-slider {
+    height: 35vh;
+    width: auto;
+  }
+  .img-slider .small {
+    width: 8vw;
+    height: 8vh;
+    opacity: 0.5;
+  }
+  .img-slider #big {
+    width: 35vw;
+    height: 25vh;
+    transform: none;
+    filter: drop-shadow(7px 7px 7px black);
+  }
+  .img-slider .small2 {
+    width: 12vw;
+    height: 12vh;
+    opacity: 0.7;
+  }
+  .img-slider .small3 {
+    width: 5vw;
+    height: 5vh;
+    opacity: 0.3;
+  }
+  #men-acc {
+    font-size: 0.8em;
+  }
+  #men-acc .watches {
+    margin: 3em 10px 2em 10px;
+  }
+  #men-acc .backpack {
+    margin: 2em 10px;
+  }
+  #men-acc .wallet {
+    margin: 2em 10px;
+  }
+  #men-acc .belt {
+    margin: 2em 10px;
+  }
+  #men-acc .sunglasses {
+    margin: 2em 10px;
+  }
+  #women-acc {
+    font-size: 0.8em;
+    word-spacing: 0;
+  }
+  #women-acc .women-watches {
+    margin: 3em 10px 2em 10px;
+  }
+  #women-acc .women-bag {
+    margin: 2em 10px;
+  }
+  #women-acc .women-bag #bag-h3 {
+    width: 270px;
+  }
+  #women-acc .women-wallet {
+    margin: 2em 10px;
+  }
+  #women-acc .women-sunglasses {
+    margin: 2em 10px;
+  }
+  footer {
+    margin-top: 5vh;
+    font-size: 0.7em;
+  }
+  footer .copyright {
+    display: flex;
+    flex-direction: column;
+    height: 17ch;
+  }
+  footer #slogan {
+    margin: 2em 7ch;
+  }
+  footer #offers {
+    align-self: center;
+  }
+  footer #offers h5 {
+    width: 20ch;
+  }
+  footer .footer-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

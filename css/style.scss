@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap");
+$mainColor: #000;
+$primaryColor: #fff;
+@mixin border-rad($radius) {
+   -webkit-border-radius: $radius;
+   -moz-border-radius: $radius;
+   border-radius: $radius;
+}
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   font: {
+      family: "Source Code Pro", monospace, arial, helvetica, cursive;
+      size: 1em;
+      weight: 500;
+   }
+   line-height: 1.7em;
+   letter-spacing: 2px;
+   word-spacing: 2px;
+   background: linear-gradient(to right, #ece9e6, #ffffff);
+   color: $mainColor;
+}
+::-webkit-scrollbar {
+   background-color: red;
+   width: 7px;
+}
+::-webkit-scrollbar-track {
+   width: 5px;
+   background-color: $primaryColor;
+}
+::-webkit-scrollbar-thumb {
+   width: 5px;
+   border-radius: 30px;
+   background: linear-gradient(to top, #232526, #414345);
+}
+
+@import "styled/header";
+.alert-box {
+   margin: 0ch 0 4ch 0;
+   background-color: lighten($color: skyblue, $amount: 12);
+   color: darken($color: skyblue, $amount: 40);
+   padding: 10px 20px;
+   // display: flex;
+   display: none;
+   justify-content: space-between;
+   align-items: center;
+   letter-spacing: 2px;
+   font-family: cursive;
+   span {
+      color: navy;
+      font-weight: bold;
+      text-shadow: 0 0 0 navy;
+   }
+   button {
+      border: none;
+      background-color: transparent;
+      color: lighten($color: grey, $amount: 15);
+      font-size: 1.2em;
+      cursor: pointer;
+   }
+}
+.address {
+   font-variant: small-caps;
+   margin-right: 5vw;
+   margin-bottom: 3ch;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   width: 35ch;
+   height: 8ch;
+   padding: 10px 0 3ch 10px;
+   @include border-rad(20px);
+   float: right;
+   background-color: rgba(0, 0, 0, 0.7);
+   color: #fff;
+   align-items: center;
+   clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 75%,
+      75% 75%,
+      75% 100%,
+      50% 75%,
+      0% 75%
+   );
+
+   .fa-address-book {
+      font-size: 1.9em;
+   }
+   .fa-info-circle {
+      font-size: 1.2em;
+      margin: 0 10px;
+      cursor: pointer;
+      &:hover {
+         filter: drop-shadow(0 0 2px white);
+      }
+   }
+   #input-box {
+      width: 20ch;
+      margin: 0 10px;
+      padding: 5px;
+      height: 4.3ch;
+      background: $primaryColor;
+      &:focus-within {
+         background: aliceblue;
+         color: $mainColor;
+         caret-color: lime;
+      }
+   }
+   #pin-btn {
+      font-size: 0.9em;
+      position: relative;
+      font-variant: small-caps;
+      padding: 7px;
+      background: $mainColor;
+      color: white;
+      box-shadow: 2px 2px 5px white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 1s;
+      @include border-rad(5px);
+      &:hover {
+         box-shadow: -2px -2px 5px white;
+         transition: all 1s;
+      }
+   }
+   #save-data {
+      font-size: 1.2em;
+      font-family: monospace;
+   }
+   @keyframes pin-box {
+      0% {
+         transform: translateX(-20vw) translateY(3ch);
+         opacity: 0.4;
+      }
+      100% {
+         transform: translateX(0);
+         opacity: 1;
+      }
+   }
+}
+@import "styled/slider";
+@import "styled/back2top";
+@import "styled/main";
+@import "styled/partner";
+@import "styled/know";
+@import "styled/footer";
+@import "styled/media";

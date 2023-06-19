@@ -1,0 +1,127 @@
+header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+   text-transform: uppercase;
+   img {
+      width: 170px;
+      align-self: flex-start;
+      position: relative;
+      animation: logo 0.5s linear 0.1s forwards;
+      &:hover {
+         filter: drop-shadow(0 5px 1px silver);
+      }
+      @keyframes logo {
+         0% {
+            transform: translateX(-100px);
+            opacity: 0;
+         }
+         100% {
+            transform: translateX(0px);
+            opacity: 1;
+         }
+      }
+   }
+   .navigation {
+      list-style: none;
+      position: relative;
+      animation: li 0.9s linear 0.1s forwards;
+      @keyframes li {
+         0% {
+            transform: translateY(-100px);
+         }
+         100% {
+            transform: translateY(0);
+         }
+      }
+      %links {
+         text-decoration: none;
+         color: $mainColor;
+         font-weight: bold;
+      }
+      .links {
+         transition: all 0.5s;
+         position: relative;
+         @extend %links;
+         &:hover {
+            text-shadow: 0 0 0 $mainColor;
+         }
+         &::after {
+            content: "\2605";
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            bottom: 0;
+            left: 0%;
+            display: none;
+         }
+         &:hover::after {
+            display: block;
+            position: absolute;
+            left: 35%;
+            bottom: 20%;
+            animation: star 0.7s ease;
+            filter: drop-shadow(2px 2px 0px silver);
+            @keyframes star {
+               0% {
+                  opacity: 0;
+                  transform: translateX(-1.5vw);
+               }
+               100% {
+                  opacity: 1;
+                  transform: translateX(0px);
+               }
+            }
+         }
+      }
+      #active {
+         background-color: $mainColor;
+         color: $primaryColor;
+         padding: 10px;
+         clip-path: polygon(
+            20% 0%,
+            80% 0%,
+            100% 20%,
+            100% 80%,
+            80% 100%,
+            20% 100%,
+            0% 80%,
+            0% 20%
+         );
+         @extend %links;
+      }
+
+      li {
+         display: inline;
+         margin: 0 3vw;
+      }
+   }
+   label {
+      display: none;
+      font-size: 2em;
+      float: right;
+      width: 26px;
+   }
+   #toggle {
+      display: none;
+      clear: right;
+   }
+   .fa-shopping-cart {
+      margin-right: 50px;
+      font-size: 1.5em;
+      position: relative;
+      animation: cart 1s ease 0.1s;
+      cursor: pointer;
+   }
+   @keyframes cart {
+      0% {
+         opacity: 0;
+         transform: translateX(100px);
+      }
+      100% {
+         transform: translateX(0px);
+         opacity: 1;
+      }
+   }
+}

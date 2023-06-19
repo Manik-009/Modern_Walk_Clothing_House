@@ -1,0 +1,564 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap");
+$mainColor: #000;
+$primaryColor: #fff;
+@mixin border-rad($radius) {
+   -webkit-border-radius: $radius;
+   -moz-border-radius: $radius;
+   border-radius: $radius;
+}
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   font: {
+      family: "Source Code Pro", monospace, arial, helvetica, cursive;
+      size: 1em;
+      weight: 500;
+   }
+   line-height: 1.7em;
+   letter-spacing: 2px;
+   word-spacing: 2px;
+   background: linear-gradient(to right, #ece9e6, #ffffff);
+   color: $mainColor;
+}
+::-webkit-scrollbar {
+   background-color: red;
+   width: 7px;
+}
+::-webkit-scrollbar-track {
+   width: 5px;
+   background-color: $primaryColor;
+}
+::-webkit-scrollbar-thumb {
+   width: 5px;
+   border-radius: 30px;
+   background: linear-gradient(to top, #232526, #414345);
+}
+
+@import "styled/header";
+#heading {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   padding-bottom: 7px;
+   border-bottom: 2px solid $mainColor;
+   letter-spacing: 0;
+   word-spacing: 0;
+   #menC-link1 {
+      color: $mainColor;
+      text-shadow: 0 0 0 $mainColor;
+      font-weight: bold;
+      margin-left: 20px;
+      &:hover {
+         text-decoration: none;
+      }
+   }
+   #menC-link2 {
+      color: $mainColor;
+      font-weight: bold;
+      &:hover {
+         text-decoration: none;
+      }
+   }
+   .sym {
+      color: silver;
+      font-weight: bold;
+      text-shadow: 0 0 0 silver;
+   }
+}
+@import "styled/back2top";
+#sizechart {
+   margin-top: 2ch;
+   letter-spacing: 0;
+   word-spacing: 0;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: flex-start;
+   table {
+      display: none;
+      border-spacing: 0;
+      border: 1px solid lightgrey;
+      th {
+         font-weight: bold;
+         text-shadow: 0 0 0 $mainColor;
+         padding: 0px 15px;
+         span {
+            font-size: 0.7em;
+         }
+         background: silver;
+      }
+      td {
+         padding: 2px 20px;
+         font-size: 0.8em;
+         font-weight: bold;
+      }
+      tr {
+         &:nth-child(even) {
+            background-color: lightgrey;
+         }
+         &:nth-child(odd) {
+            background-color: darken($color: #fff, $amount: 1%);
+         }
+      }
+   }
+   p {
+      font-weight: bold;
+      text-shadow: 0 0 0 $mainColor;
+      cursor: pointer;
+      color: lighten($color: green, $amount: 5%);
+      &:hover {
+         text-decoration: underline;
+         color: lighten($color: red, $amount: 5%);
+      }
+   }
+   @keyframes sizeCh {
+      0% {
+         opacity: 0;
+         transform: scale(0);
+      }
+      100% {
+         opacity: 1;
+         transform: scale(1);
+      }
+   }
+}
+main {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   flex-wrap: wrap;
+   position: relative;
+   gap: 1.5em;
+   margin-top: 2em;
+   %cart-buy {
+      padding: 10px;
+      border: none;
+      margin: 10px 0;
+      color: $primaryColor;
+      text-transform: uppercase;
+      font-size: 0.75em;
+      cursor: pointer;
+   }
+   .item-cart {
+      background-color: orangered;
+      @extend %cart-buy;
+   }
+   .item-buy {
+      background-color: orange;
+      @extend %cart-buy;
+   }
+   %l-rBtn {
+      position: absolute;
+      top: 15%;
+      background: transparent;
+      color: $mainColor;
+      border: none;
+      font-size: 2.3em;
+   }
+   .price {
+      span {
+         font-size: 0.8em;
+         text-decoration: line-through;
+      }
+   }
+   .sizes {
+      display: flex;
+      flex-wrap: wrap;
+      letter-spacing: 0;
+      margin-top: 10px;
+      p {
+         text-shadow: 0 0 0 $mainColor;
+         font-weight: bold;
+         font-size: 0.7em;
+         margin-left: 10px;
+      }
+      > button {
+         margin: 5px 10px;
+         cursor: pointer;
+         padding: 5px 7px;
+         background-color: transparent;
+         border: 1px solid lightgrey;
+         &:hover {
+            border: 1px solid silver;
+         }
+      }
+   }
+   h5 {
+      color: seagreen;
+   }
+   h4 {
+      font-size: 0.85em;
+   }
+   .outOstock {
+      color: silver;
+      outline: 1px dashed silver;
+      &:hover {
+         opacity: 0.5;
+      }
+   }
+   .spec-price {
+      color: seagreen;
+   }
+   .hurry {
+      color: red;
+   }
+   .colours {
+      margin-top: 10px;
+      p {
+         text-shadow: 0 0 0 $mainColor;
+         font-weight: bold;
+         font-size: 0.7em;
+         text-align: left;
+         margin-left: 10px;
+      }
+      > img {
+         margin-top: 10px;
+         width: 38px;
+         height: 50px;
+         object-fit: cover;
+         border: 1px solid silver;
+         &:hover {
+            transform: scale(1);
+            cursor: pointer;
+         }
+      }
+   }
+   img {
+      margin-top: 10px;
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      &:hover {
+         transform: scale(1.05);
+         transition: transform 1s;
+         cursor: grabbing;
+      }
+   }
+   .wish-list {
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: darken($color: white, $amount: 10);
+      font-size: 1.5em;
+      position: absolute;
+      top: 3%;
+      right: 5%;
+      transition: all 1s;
+      &:before {
+         display: none;
+         content: "Add to Wish-List";
+         background: rgba(0, 0, 0, 0.5);
+         color: $primaryColor;
+         width: 16ch;
+         position: absolute;
+         top: -50%;
+         padding: 2px 0 8px 0;
+         right: 0%;
+         font-size: 0.5em;
+         clip-path: polygon(
+            0% 0%,
+            100% 0%,
+            100% 75%,
+            75% 75%,
+            75% 100%,
+            50% 75%,
+            0% 75%
+         );
+      }
+      &:hover::before {
+         display: block;
+      }
+   }
+   @keyframes shake {
+      0% {
+         transform: skew(0);
+      }
+      25% {
+         transform: skew(5deg);
+      }
+      50% {
+         transform: skew(-5deg);
+      }
+      75% {
+         transform: skew(5deg);
+      }
+      100% {
+         transform: skew(-5deg);
+      }
+   }
+   #shorts1 {
+      position: relative;
+      background: $primaryColor;
+      width: 300px;
+      height: 670px;
+      box-shadow: 0 0 10px silver;
+      text-align: center;
+      #leftbtn-sh1 {
+         @extend %l-rBtn;
+         left: 5%;
+      }
+      #rightbtn-sh1 {
+         @extend %l-rBtn;
+         right: 5%;
+      }
+      #total-sh1 {
+         background: $mainColor;
+         color: $primaryColor;
+         font-weight: bold;
+         margin: 38px 0 10px 0;
+         font-size: 0.8em;
+      }
+   }
+   #shorts2 {
+      position: relative;
+      background: $primaryColor;
+      width: 300px;
+      height: 670px;
+      box-shadow: 0 0 10px silver;
+      text-align: center;
+      #leftbtn-sh2 {
+         @extend %l-rBtn;
+         left: 5%;
+      }
+      #rightbtn-sh2 {
+         @extend %l-rBtn;
+         right: 5%;
+      }
+      #total-sh2 {
+         background: $mainColor;
+         color: $primaryColor;
+         font-weight: bold;
+         margin: 0 0 10px 0;
+         font-size: 0.8em;
+      }
+   }
+   #shorts3 {
+      position: relative;
+      background: $primaryColor;
+      width: 300px;
+      height: 670px;
+      box-shadow: 0 0 10px silver;
+      text-align: center;
+      #leftbtn-sh3 {
+         @extend %l-rBtn;
+         left: 5%;
+      }
+      #rightbtn-sh3 {
+         @extend %l-rBtn;
+         right: 5%;
+      }
+      #total-sh3 {
+         background: $mainColor;
+         color: $primaryColor;
+         font-weight: bold;
+         margin: 0 0 10px 0;
+         font-size: 0.8em;
+      }
+   }
+   #shorts4 {
+      position: relative;
+      background: $primaryColor;
+      width: 300px;
+      height: 670px;
+      box-shadow: 0 0 10px silver;
+      text-align: center;
+      #leftbtn-sh4 {
+         @extend %l-rBtn;
+         left: 5%;
+      }
+      #rightbtn-sh4 {
+         @extend %l-rBtn;
+         right: 5%;
+      }
+      #total-sh4 {
+         background: $mainColor;
+         color: $primaryColor;
+         font-weight: bold;
+         margin: 0 0 10px 0;
+         font-size: 0.8em;
+      }
+   }
+   #shorts5 {
+      position: relative;
+      background: $primaryColor;
+      width: 300px;
+      height: 670px;
+      box-shadow: 0 0 10px silver;
+      text-align: center;
+      #leftbtn-sh5 {
+         @extend %l-rBtn;
+         left: 5%;
+      }
+      #rightbtn-sh5 {
+         @extend %l-rBtn;
+         right: 5%;
+      }
+      #total-sh5 {
+         background: $mainColor;
+         color: $primaryColor;
+         font-weight: bold;
+         margin: 35px 0 10px 0;
+         font-size: 0.8em;
+      }
+   }
+   #shorts6 {
+      position: relative;
+      background: $primaryColor;
+      width: 300px;
+      height: 670px;
+      box-shadow: 0 0 10px silver;
+      text-align: center;
+      #leftbtn-sh6 {
+         @extend %l-rBtn;
+         left: 5%;
+      }
+      #rightbtn-sh6 {
+         @extend %l-rBtn;
+         right: 5%;
+      }
+      #total-sh6 {
+         background: $mainColor;
+         color: $primaryColor;
+         font-weight: bold;
+         margin: 0 0 10px 0;
+         font-size: 0.8em;
+      }
+   }
+   #shorts7 {
+      position: relative;
+      background: $primaryColor;
+      width: 300px;
+      height: 670px;
+      box-shadow: 0 0 10px silver;
+      text-align: center;
+      #leftbtn-sh7 {
+         @extend %l-rBtn;
+         left: 5%;
+      }
+      #rightbtn-sh7 {
+         @extend %l-rBtn;
+         right: 5%;
+      }
+      #total-sh7 {
+         background: $mainColor;
+         color: $primaryColor;
+         font-weight: bold;
+         margin: 35px 0 10px 0;
+         font-size: 0.8em;
+      }
+   }
+}
+@import "styled/type";
+@media only screen and (min-width: 689px) and (max-width: 1024px) {
+   header {
+      font-size: 0.73em;
+      img {
+         width: 100px;
+      }
+      .fa-shopping-cart {
+         font-size: 1.5em;
+      }
+   }
+   #sizechart {
+      font-size: 0.7em;
+      table {
+         th {
+            padding: 0px 10px;
+         }
+         td {
+            padding: 2px 10px;
+            font-size: 0.8em;
+            font-weight: bold;
+         }
+      }
+   }
+   footer {
+      font-size: 0.7em;
+      .footer-content {
+         flex-wrap: wrap;
+      }
+      #offers {
+         h5 {
+            font-size: 1.2em;
+         }
+      }
+   }
+}
+@media only screen and (min-width: 320px) and (max-width: 688px) {
+   header {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      img {
+         width: 150px;
+      }
+      .navigation {
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         width: 100vw;
+         background: rgba(0, 0, 0, 0.2);
+         li {
+            display: none;
+            margin: 25px;
+            font-size: 0.8em;
+         }
+      }
+      label {
+         display: block;
+         font-size: 2.5em;
+         margin-bottom: 10px;
+         margin-right: 1.5ch;
+      }
+      #toggle:checked + .navigation li {
+         display: block;
+         animation: oj 0.7s linear 0s;
+         @keyframes oj {
+            0% {
+               opacity: 0;
+               transform: translateX(-200px) skew(0deg) scale(0);
+            }
+            50% {
+               opacity: 0;
+               transform: translateX(-100px) scale(0.5) skew(90deg);
+            }
+            100% {
+               opacity: 1;
+               transform: translateX(0px) scale(1) skew(0deg);
+            }
+         }
+      }
+      .fa-shopping-cart {
+         display: block;
+         margin: 20px auto;
+      }
+   }
+   #heading {
+      font-size: 0.7em;
+   }
+   #sizechart {
+      font-size: 0.5em;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      table {
+         font-size: 1em;
+         th {
+            padding: 0px 5px;
+         }
+         td {
+            padding: 0px 5px;
+         }
+      }
+   }
+   footer {
+      font-size: 0.7em;
+      display: flex;
+      flex-direction: column;
+      height: 20ch;
+   }
+}

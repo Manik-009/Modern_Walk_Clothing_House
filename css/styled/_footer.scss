@@ -1,0 +1,362 @@
+footer {
+   margin-top: 5vh;
+   width: 100%;
+   height: auto;
+   background: linear-gradient(to right, #232526, #414345);
+   color: $primaryColor;
+   img {
+      width: 150px;
+      filter: drop-shadow(2px 2px 5px white);
+      margin: 0 auto;
+      display: block;
+      @keyframes flogo {
+         0% {
+            transform: skewX(0);
+         }
+         50% {
+            transform: skewX(-10deg);
+         }
+
+         100% {
+            transform: skewX(10deg);
+         }
+      }
+   }
+   .footer-content {
+      display: flex;
+   }
+   @keyframes phone {
+      0% {
+         color: yellowgreen;
+         filter: drop-shadow(0 0 10px yellowgreen);
+      }
+      10% {
+         color: tomato;
+         filter: drop-shadow(0 0 10px tomato);
+      }
+      20% {
+         color: cyan;
+         filter: drop-shadow(0 0 10px cyan);
+      }
+      30% {
+         color: yellow;
+         filter: drop-shadow(0 0 10px yellow);
+      }
+      40% {
+         color: hotpink;
+         filter: drop-shadow(0 0 10px hotpink);
+      }
+      50% {
+         color: maroon;
+         filter: drop-shadow(0 0 10px maroon);
+      }
+      60% {
+         color: white;
+         filter: drop-shadow(0 0 10px white);
+      }
+      70% {
+         color: blue;
+         filter: drop-shadow(0 0 10px blue);
+      }
+      80% {
+         color: magenta;
+         filter: drop-shadow(0 0 10px magenta);
+      }
+      90% {
+         color: crimson;
+         filter: drop-shadow(0 0 10px crimson);
+      }
+      100% {
+         color: cadetblue;
+         filter: drop-shadow(0 0 10px cadetblue);
+      }
+   }
+   @keyframes mail {
+      100% {
+         color: yellowgreen;
+         filter: drop-shadow(0 0 10px yellowgreen);
+      }
+      90% {
+         color: tomato;
+         filter: drop-shadow(0 0 10px tomato);
+      }
+      80% {
+         color: cyan;
+         filter: drop-shadow(0 0 10px cyan);
+      }
+      70% {
+         color: yellow;
+         filter: drop-shadow(0 0 10px yellow);
+      }
+      60% {
+         color: hotpink;
+         filter: drop-shadow(0 0 10px hotpink);
+      }
+      50% {
+         color: maroon;
+         filter: drop-shadow(0 0 10px maroon);
+      }
+      40% {
+         color: white;
+         filter: drop-shadow(0 0 10px white);
+      }
+      30% {
+         color: blue;
+         filter: drop-shadow(0 0 10px blue);
+      }
+      20% {
+         color: magenta;
+         filter: drop-shadow(0 0 10px magenta);
+      }
+      10% {
+         color: crimson;
+         filter: drop-shadow(0 0 10px crimson);
+      }
+      0% {
+         color: cadetblue;
+         filter: drop-shadow(0 0 10px cadetblue);
+      }
+   }
+   @keyframes map {
+      0% {
+         color: yellowgreen;
+         filter: drop-shadow(0 0 10px yellowgreen);
+      }
+      10% {
+         color: tomato;
+         filter: drop-shadow(0 0 10px tomato);
+      }
+      20% {
+         color: cyan;
+         filter: drop-shadow(0 0 10px cyan);
+      }
+      30% {
+         color: yellow;
+         filter: drop-shadow(0 0 10px yellow);
+      }
+      40% {
+         color: hotpink;
+         filter: drop-shadow(0 0 10px hotpink);
+      }
+      50% {
+         color: maroon;
+         filter: drop-shadow(0 0 10px maroon);
+      }
+      60% {
+         color: white;
+         filter: drop-shadow(0 0 10px white);
+      }
+      70% {
+         color: blue;
+         filter: drop-shadow(0 0 10px blue);
+      }
+      80% {
+         color: magenta;
+         filter: drop-shadow(0 0 10px magenta);
+      }
+      90% {
+         color: crimson;
+         filter: drop-shadow(0 0 10px crimson);
+      }
+      100% {
+         color: cadetblue;
+         filter: drop-shadow(0 0 10px cadetblue);
+      }
+   }
+   %phone {
+      text-decoration: none;
+      color: $primaryColor;
+      font-weight: bold;
+      margin: 0 5px;
+   }
+   #phno {
+      display: flex;
+      margin: 20px;
+      .phone {
+         @extend %phone;
+      }
+   }
+   #email {
+      margin: 20px;
+      display: flex;
+      .email {
+         @extend %phone;
+      }
+   }
+   #location {
+      display: flex;
+      margin: 20px;
+      letter-spacing: 0px;
+      .location {
+         @extend %phone;
+      }
+   }
+   .copyright {
+      background: $mainColor;
+      display: flex;
+      margin-top: 30px;
+      padding: 20px;
+      align-items: center;
+      justify-content: space-between;
+      span {
+         position: relative;
+         font-size: 2em;
+         font-weight: bold;
+         animation: heart 5s ease-in-out 0.1s infinite alternate;
+      }
+      @keyframes heart {
+         0% {
+            color: crimson;
+            filter: drop-shadow(0 0px 1px red);
+         }
+         25% {
+            color: crimson;
+            filter: drop-shadow(1px -3px 1px red);
+         }
+         50% {
+            color: crimson;
+            filter: drop-shadow(3px -6px 1px red);
+         }
+         75% {
+            color: crimson;
+            filter: drop-shadow(5px -9px 1px red);
+         }
+         100% {
+            color: crimson;
+            filter: drop-shadow(7px -12px 1px red);
+         }
+      }
+      // .soc-links {
+      //    background: rgba(255, 255, 255, 0.2);
+      //    padding: 5px;
+      //    transition: all 0.5s;
+      //    @include border-rad(5px);
+      //    @extend %phone;
+      //    &:hover {
+      //       font-size: 1.7em;
+      //       background: rgba($color: #0072ff, $alpha: 0.5);
+      //       // // color: $mainColor;
+      //       transition: all 1s;
+      //    }
+      // }
+      .soc-links {
+         @extend %phone;
+      }
+      .fa-facebook {
+         &:hover {
+            font-size: 1em;
+            color: #0072ff;
+            transition: all 0.6s;
+         }
+      }
+      .fa-instagram {
+         &:hover {
+            font-size: 1em;
+            color: #fd1d1d;
+            filter: drop-shadow(0 0 1px #fcb045);
+            transition: all 0.6s;
+         }
+      }
+      .fa-youtube {
+         &:hover {
+            font-size: 1em;
+            color: crimson;
+            transition: all 0.6s;
+         }
+      }
+      .fa-linkedin {
+         &:hover {
+            font-size: 1em;
+            color: #22687b;
+            // background-color: #045de9;
+            background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+            transition: all 0.6s;
+         }
+      }
+   }
+   #slogan {
+      flex: 33.3%;
+      font-weight: bold;
+      margin-right: 30px;
+      &::first-letter {
+         font-size: 2em;
+      }
+   }
+   .section1 {
+      flex: 33.3%;
+   }
+   #form {
+      flex: 33.3%;
+      align-self: flex-start;
+      form {
+         font-size: 1em;
+         font-weight: bold;
+         padding: 5px 10px;
+         margin-right: 15px;
+         fieldset {
+            text-align: center;
+            font-variant: small-caps;
+            border: 3px groove $primaryColor;
+            border-radius: 30%;
+            padding: 20px;
+            > legend {
+               font-size: 1.2em;
+            }
+         }
+         #sub-btn {
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            font-weight: bold;
+            color: $mainColor;
+            margin: 10px 0;
+            padding: 12px;
+            font-family: serif;
+            font-size: 1em;
+            border-radius: 0px 20px 0 20px;
+            border: 2px ridge $mainColor;
+            transition: all 1s;
+            font-weight: bold;
+            &:hover {
+               background: black;
+               color: white;
+               border: 2px ridge #fff;
+               border-radius: 20px 0px 20px 0px;
+               transition: all 0.7s;
+            }
+         }
+         input {
+            margin: 10px 0;
+         }
+         input[type="text"],
+         [type="email"] {
+            width: 25ch;
+            background: transparent;
+            color: #fff;
+            height: 4ch;
+            font-size: 1em;
+            padding: 7px;
+            border: 2px solid grey;
+         }
+         input[type="text"]:focus,
+         [type="email"]:focus {
+            background: $primaryColor;
+            caret-color: $mainColor;
+            color: $mainColor;
+         }
+         textarea {
+            color: #fff;
+            background: transparent;
+            border: 2px solid grey;
+            padding: 5px;
+            caret-color: $mainColor;
+            height: 6ch;
+            width: 220px;
+            margin: 10px 15px 0 0;
+         }
+         textarea:focus {
+            background: $primaryColor;
+            caret-color: $mainColor;
+            color: $mainColor;
+         }
+      }
+   }
+}

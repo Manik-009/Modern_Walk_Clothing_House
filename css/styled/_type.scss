@@ -1,0 +1,75 @@
+footer {
+   background: $mainColor;
+   color: $primaryColor;
+   display: flex;
+   padding: 20px;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 5ch;
+   span {
+      position: relative;
+      font-size: 2em;
+      font-weight: bold;
+      animation: heart 5s ease-in-out 0.1s infinite alternate;
+   }
+   %phone {
+      text-decoration: none;
+      color: $primaryColor;
+      font-weight: bold;
+      margin: 0 5px;
+   }
+   @keyframes heart {
+      0% {
+         color: crimson;
+         filter: drop-shadow(0 0px 1px red);
+      }
+      25% {
+         color: crimson;
+         filter: drop-shadow(1px -3px 1px red);
+      }
+      50% {
+         color: crimson;
+         filter: drop-shadow(3px -6px 1px red);
+      }
+      75% {
+         color: crimson;
+         filter: drop-shadow(5px -9px 1px red);
+      }
+      100% {
+         color: crimson;
+         filter: drop-shadow(7px -12px 1px red);
+      }
+   }
+   .soc-links {
+      @extend %phone;
+   }
+   .fa-facebook {
+      &:hover {
+         font-size: 1.7em;
+         color: #0072ff;
+         transition: all 0.7s;
+      }
+   }
+   .fa-instagram {
+      &:hover {
+         font-size: 1.7em;
+         color: #fd1d1d;
+         filter: drop-shadow(0 0 1px #fcb045);
+         transition: all 0.7s;
+      }
+   }
+   .fa-youtube {
+      &:hover {
+         font-size: 1.7em;
+         color: crimson;
+         transition: all 0.7s;
+      }
+   }
+   .fa-linkedin {
+      &:hover {
+         font-size: 1.7em;
+         color: #021b79;
+         transition: all 0.7s;
+      }
+   }
+}

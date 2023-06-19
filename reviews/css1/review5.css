@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Code Pro", monospace, arial, helvetica, cursive;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.7em;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  color: #000;
+}
+
+::-webkit-scrollbar {
+  background-color: red;
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  width: 5px;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  border-radius: 30px;
+  background: linear-gradient(to top, #232526, #414345);
+}
+
+.home-limited {
+  display: flex;
+  margin: 2em 0;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 2px solid #000;
+  padding: 20px;
+}
+.home-limited #heading {
+  display: flex;
+}
+.home-limited .top {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #000;
+}
+.container #rating {
+  border-right: 1px solid #000;
+  padding: 50px;
+}
+.container #rating #rate {
+  background: seagreen;
+  color: #fff;
+  padding: 10px;
+  border: 2px solid green;
+  margin: 0 auto;
+  display: block;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.container #progress #bar-5, .container #progress #bar-1, .container #progress #bar-2, .container #progress #bar-3, .container #progress #bar-4 {
+  display: flex;
+  align-items: center;
+}
+.container #progress .one, .container #progress .five, .container #progress .four, .container #progress .three, .container #progress .two {
+  width: 100px;
+  height: 6px;
+  background: seagreen;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  margin: 0 15px;
+}
+.container #progress .two {
+  width: 40px;
+}
+.container #progress .three {
+  width: 30px;
+}
+.container #progress .four {
+  width: 0px;
+  background: orange;
+}
+.container #progress .five {
+  width: 0px;
+  background: orangered;
+}
+main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+main img {
+  width: 200px;
+}
+main .btn, main .btn1 {
+  background: seagreen;
+  color: #fff;
+  padding: 7px;
+  border: 1px solid green;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+}
+main .btn1 {
+  background: orange;
+  border: 1px solid orange;
+}
+main .cust {
+  font-size: 0.8em;
+  font-weight: bold;
+  text-align: center;
+}
+main #rew5, main #rew4, main #rew3, main #rew2, main #rew1 {
+  background: #fff;
+  padding: 15px;
+  margin: 20px 0;
+}
+@media only screen and (min-width: 320px) and (max-width: 688px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .container #rating {
+    border-right: none;
+    padding: 50px;
+  }
+  main {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  main img {
+    width: 130px;
+    height: 130px;
+    padding-top: 20px;
+  }
+  main .cust {
+    font-size: 0.6em;
+  }
+}

@@ -1,0 +1,73 @@
+.cstmr {
+   background: rgba(0, 0, 0, 0.2);
+   // background: lightgrey;
+   margin: 2em 0;
+   padding: 1em;
+   h2 {
+      font-size: 1.5em;
+   }
+   h5 {
+      width: 75vw;
+   }
+   .count {
+      margin: 2em 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      > div {
+         background: $primaryColor;
+         padding: 20px;
+         margin: 10px;
+         text-align: center;
+         width: 25ch;
+         height: 20ch;
+         transition: all 1.5s;
+         &:hover {
+            filter: drop-shadow(7px 7px 3px $mainColor);
+            transition: all 0.7s;
+         }
+      }
+      i {
+         font-size: 2em;
+      }
+      .fa-user-friends {
+         color: seagreen;
+         display: block;
+         margin: 10px auto;
+      }
+      .fa-shopping-cart {
+         color: hotpink;
+         display: block;
+         margin: 10px auto;
+      }
+      .fa-handshake {
+         color: coral;
+         display: block;
+         margin: 10px auto;
+      }
+      .fa-hand-holding-heart {
+         color: red;
+         display: block;
+         margin: 10px auto;
+      }
+      h3 {
+         font-weight: 400;
+      }
+      p {
+         font-weight: bold;
+         text-shadow: 0 0 0 $mainColor;
+         font-size: 0.8em;
+      }
+   }
+   @keyframes count {
+      0% {
+         opacity: 0;
+         transform: translateY(-10px);
+      }
+      100% {
+         opacity: 1;
+         transform: translateY(0px);
+      }
+   }
+}

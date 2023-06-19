@@ -1,0 +1,1203 @@
+// women accessories
+#women-acc {
+   margin-top: 7em;
+   position: relative;
+   h2 {
+      text-align: center;
+      padding: 15px;
+      text-transform: uppercase;
+      border-bottom: 2px solid $mainColor;
+      box-shadow: 0 5px 5px grey;
+      text-shadow: 0 0 0 $mainColor;
+   }
+   img {
+      width: 200px;
+      height: 250px;
+      object-fit: contain;
+      padding: 10px;
+      cursor: pointer;
+      &:hover {
+         transform: scale(1.07);
+         transition: transform 0.5s;
+      }
+   }
+   h3 {
+      text-shadow: 0 0 0 $mainColor;
+      margin-left: 15px;
+      cursor: pointer;
+      width: 170px;
+   }
+   .price {
+      font-weight: bold;
+      font-size: 0.9em;
+      > span {
+         text-decoration: line-through;
+         font-size: 0.8em;
+      }
+   }
+   .off {
+      color: seagreen;
+      font-weight: bold;
+      font-size: 0.8em;
+   }
+   .special {
+      color: green;
+      font-weight: bold;
+      font-size: 0.6em;
+   }
+   .item-left {
+      font-size: 0.7em;
+      color: red;
+      font-weight: bold;
+   }
+   .item-cart {
+      background-color: orangered;
+      padding: 10px;
+      border: none;
+      margin: 10px 0;
+      color: $primaryColor;
+      text-transform: uppercase;
+      font-size: 0.75em;
+      cursor: pointer;
+   }
+   .item-buy {
+      background-color: orange;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      color: $primaryColor;
+      text-transform: uppercase;
+      font-size: 0.75em;
+      cursor: pointer;
+   }
+   @keyframes afterclick {
+      0% {
+         opacity: 0;
+      }
+      50% {
+         opacity: 0.5;
+      }
+      100% {
+         opacity: 1;
+      }
+   }
+   @keyframes Elseafterclick {
+      0% {
+         opacity: 0;
+      }
+      50% {
+         opacity: 0.5;
+      }
+      100% {
+         opacity: 1;
+      }
+   }
+   .wish-list {
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: darken($color: white, $amount: 10);
+      font-size: 1.5em;
+      position: absolute;
+      top: 3%;
+      right: 5%;
+      transition: all 1s;
+      &:before {
+         display: none;
+         content: "Add to Wish-List";
+         background: rgba(0, 0, 0, 0.5);
+         color: $primaryColor;
+         width: 16ch;
+         position: absolute;
+         top: -50%;
+         padding: 2px 0 8px 0;
+         right: 0%;
+         font-size: 0.5em;
+         clip-path: polygon(
+            0% 0%,
+            100% 0%,
+            100% 75%,
+            75% 75%,
+            75% 100%,
+            50% 75%,
+            0% 75%
+         );
+      }
+      &:hover::before {
+         display: block;
+      }
+   }
+   @keyframes shake {
+      0% {
+         transform: skew(0);
+      }
+      25% {
+         transform: skew(5deg);
+      }
+      50% {
+         transform: skew(-5deg);
+      }
+      75% {
+         transform: skew(5deg);
+      }
+      100% {
+         transform: skew(-5deg);
+      }
+   }
+   .women-watches {
+      //   display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      margin: 3em 35px 2em 35px;
+      gap: 3em;
+      align-items: flex-start;
+      > div {
+         margin-top: 5ch;
+      }
+      #wWatch1 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #wleft-btn {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #wright-btn {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #wtotal {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wWatch2 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #wleft-btn1 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #wright-btn1 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #wtotal1 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 35px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wWatch3 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #wleft-btn2 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #wright-btn2 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #wtotal2 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 35px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wWatch4 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #wleft-btn3 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #wright-btn3 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #wtotal3 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wWatch5 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #wleft-btn4 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #wright-btn4 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #wtotal4 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wWatch6 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #wleft-btn5 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #wright-btn5 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #wtotal5 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 35px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wWatch7 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #wleft-btn6 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #wright-btn6 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #wtotal6 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wWatch8 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #wleft-btn7 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #wright-btn7 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #wtotal7 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 35px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+   }
+   .women-bag {
+      //   display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      margin: 2em 35px;
+      gap: 3em;
+      align-items: flex-start;
+      > div {
+         margin-top: 5ch;
+      }
+      #bag-h3 {
+         width: 370px;
+      }
+      #bag1 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #bagleft-btn {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #bagright-btn {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #bagtotal {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #bag2 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #bagleft-btn1 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #bagright-btn1 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #bagtotal1 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #bag3 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #bagleft-btn2 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #bagright-btn2 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #bagtotal2 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #bag4 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #bagleft-btn3 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #bagright-btn3 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #bagtotal3 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #bag5 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #bagleft-btn4 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #bagright-btn4 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #bagtotal4 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #bag6 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #bagleft-btn5 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #bagright-btn5 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #bagtotal5 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 35px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #bag7 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #bagleft-btn6 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #bagright-btn6 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #bagtotal6 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+   }
+   .women-wallet {
+      // display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      margin: 2em 35px;
+      gap: 3em;
+      align-items: flex-start;
+      > div {
+         margin-top: 5ch;
+      }
+      #wwallet1 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #walleft-btn {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #walright-btn {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #waltotal {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 35px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wwallet2 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #walleft-btn1 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #walright-btn1 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #waltotal1 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wwallet3 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #walleft-btn2 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #walright-btn2 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #waltotal2 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 35px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wwallet4 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #walleft-btn3 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #walright-btn3 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #waltotal3 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wwallet5 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #walleft-btn4 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #walright-btn4 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #waltotal4 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wwallet6 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #walleft-btn5 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #walright-btn5 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #waltotal5 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 35px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wwallet7 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #walleft-btn6 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #walright-btn6 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #waltotal6 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 35px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+   }
+   .women-sunglasses {
+      // display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      margin: 2em 35px;
+      gap: 3em;
+      align-items: flex-start;
+      .sgsize {
+         display: flex;
+         align-items: center;
+         justify-content: space-evenly;
+         text-shadow: 0 0 0 $mainColor;
+         font-weight: bold;
+         margin-top: 5px;
+         font-size: 0.65em;
+         .size-chart {
+            border: 1px solid lightgrey;
+            padding: 0 10px;
+            cursor: pointer;
+            &:hover {
+               border: 1px solid silver;
+            }
+         }
+      }
+      > div {
+         margin-top: 5ch;
+      }
+      #wsunglasses1 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 620px;
+         text-align: center;
+         display: none;
+         #wsgleft-btn {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #wsgright-btn {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #wsgtotal {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wsunglasses2 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 620px;
+         text-align: center;
+         display: none;
+         #wsgleft-btn1 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #wsgright-btn1 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #wsgtotal1 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wsunglasses3 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 620px;
+         text-align: center;
+         display: none;
+         #wsgleft-btn2 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #wsgright-btn2 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #wsgtotal2 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 65px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wsunglasses4 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 620px;
+         text-align: center;
+         display: none;
+         #wsgleft-btn3 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #wsgright-btn3 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #wsgtotal3 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 65px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wsunglasses5 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 620px;
+         text-align: center;
+         display: none;
+         #wsgleft-btn4 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #wsgright-btn4 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #wsgtotal4 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 65px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wsunglasses6 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 620px;
+         text-align: center;
+         display: none;
+         #wsgleft-btn5 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #wsgright-btn5 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #wsgtotal5 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wsunglasses7 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 620px;
+         text-align: center;
+         display: none;
+         #wsgleft-btn6 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #wsgright-btn6 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #wsgtotal6 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 35px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wsunglasses8 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 620px;
+         text-align: center;
+         display: none;
+         #wsgleft-btn7 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #wsgright-btn7 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #wsgtotal7 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 60px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wsunglasses9 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 620px;
+         text-align: center;
+         display: none;
+         #wsgleft-btn8 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #wsgright-btn8 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #wsgtotal8 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 35px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+   }
+}

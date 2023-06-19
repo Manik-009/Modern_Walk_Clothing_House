@@ -1,0 +1,374 @@
+@media only screen and (min-width: 689px) and (max-width: 1024px) {
+   header {
+      font-size: 0.73em;
+      img {
+         width: 100px;
+      }
+      .fa-shopping-cart {
+         font-size: 1.5em;
+      }
+   }
+   .alert-box {
+      font-size: 0.7em;
+      font-family: cursive;
+      padding: 10px;
+      letter-spacing: 1px;
+   }
+   .img-slider {
+      margin: 5em auto;
+      height: 55ch;
+      width: 90vw;
+      img {
+         height: 45ch;
+         width: 67vw;
+      }
+      #left-btn {
+         position: absolute;
+         top: 37%;
+         left: 4%;
+         height: 180px;
+         width: 35px;
+      }
+      #camera {
+         position: absolute;
+         left: 4.2%;
+      }
+      #right-btn {
+         position: absolute;
+         top: 45%;
+         right: 2%;
+         height: 60px;
+         width: 60px;
+      }
+   }
+   main {
+      .offers {
+         img {
+            width: 300px;
+            height: 200px;
+         }
+         h4 {
+            font-size: 1.3em;
+         }
+      }
+      #sbi {
+         width: 65vw;
+         img {
+            width: 120px;
+            height: 70px;
+         }
+         h5 {
+            font-size: 0.7em;
+            padding-top: 10px;
+         }
+         p {
+            font-size: 0.55em;
+         }
+      }
+   }
+   #partner {
+      width: 60vw;
+      position: relative;
+      h2 {
+         font-size: 0.7em;
+         padding: 10px;
+      }
+      img {
+         width: 45vw;
+         height: auto;
+      }
+      &::before {
+         content: " ";
+         position: absolute;
+         top: 50%;
+         width: 22vw;
+         left: -33%;
+      }
+      &::after {
+         content: " ";
+         position: absolute;
+         top: 50%;
+         width: 22vw;
+         right: -32.5%;
+      }
+   }
+   #brands {
+      .brand-img {
+         > img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+         }
+      }
+   }
+   footer {
+      font-size: 0.7em;
+      .footer-content {
+         flex-wrap: wrap;
+      }
+      #form {
+         form {
+            textarea {
+               color: #fff;
+               background: transparent;
+               border: 2px solid grey;
+               padding: 5px;
+               caret-color: $mainColor;
+               height: 4ch;
+               width: 160px;
+               margin: 10px 15px 0 0;
+            }
+         }
+      }
+   }
+}
+@media only screen and (min-width: 320px) and (max-width: 688px) {
+   header {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      img {
+         width: 150px;
+      }
+      .navigation {
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         width: 100vw;
+         background: rgba(0, 0, 0, 0.2);
+         clip-path: polygon(
+            0% 15%,
+            15% 15%,
+            15% 0%,
+            85% 0%,
+            85% 15%,
+            100% 15%,
+            100% 85%,
+            85% 85%,
+            85% 100%,
+            15% 100%,
+            15% 85%,
+            0% 85%
+         );
+
+         li {
+            display: none;
+            margin: 25px;
+            font-size: 0.8em;
+         }
+      }
+      label {
+         display: block;
+         font-size: 2.5em;
+         margin-bottom: 10px;
+         margin-right: 1.5ch;
+      }
+      #toggle:checked + .navigation li {
+         display: block;
+         animation: oj 0.7s linear 0s;
+         @keyframes oj {
+            0% {
+               opacity: 0;
+               transform: translateX(-200px) skew(0deg) scale(0);
+            }
+            50% {
+               opacity: 0;
+               transform: translateX(-100px) scale(0.5) skew(90deg);
+            }
+            100% {
+               opacity: 1;
+               transform: translateX(0px) scale(1) skew(0deg);
+            }
+         }
+      }
+      .fa-shopping-cart {
+         display: block;
+         margin: 20px auto;
+      }
+   }
+   .address {
+      font-size: 0.8em;
+      width: 40ch;
+      justify-content: center;
+      margin: 20px 0;
+      #input-box {
+         font-size: 1em;
+         width: 20ch;
+         height: 3.3ch;
+      }
+      #pin-btn {
+         padding: 4px;
+      }
+   }
+   .alert-box {
+      font-size: 0.6em;
+      padding: 5px 10px;
+      button {
+         font-size: 2em;
+      }
+   }
+   .img-slider {
+      margin: 5em auto;
+      // padding: 2.5vw;
+      position: relative;
+      height: 60ch;
+      width: 90vw;
+      img {
+         width: 70vw;
+         height: 40ch;
+         margin: 4em auto;
+      }
+      #left-btn {
+         position: absolute;
+         top: -1%;
+         height: 130px;
+         width: 30px;
+         transform: rotate(90deg);
+         left: 40%;
+      }
+      #camera {
+         position: absolute;
+         top: 7.6%;
+         height: 30px;
+         width: 30px;
+         left: 65%;
+         margin-left: 10px;
+      }
+      #right-btn {
+         position: absolute;
+         top: 87%;
+         left: 45%;
+         height: 50px;
+         width: 50px;
+      }
+   }
+   main {
+      h1 {
+         font-size: clamp(0.9em, 2vw, 1.5em);
+      }
+      h3 {
+         font-size: 0.7em;
+      }
+      p {
+         font-size: 0.6em;
+      }
+      .offers {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         img {
+            width: 250px;
+            height: 150px;
+         }
+         #limited {
+            margin: 2em 0;
+         }
+      }
+      #sbi {
+         width: 100vw;
+         h5 {
+            font-size: 0.51em;
+            margin-top: 5px;
+         }
+         p {
+            margin-top: -30px;
+            font-size: 0.4em;
+         }
+      }
+   }
+   #partner {
+      width: 70vw;
+      height: 25ch;
+      h2 {
+         font-size: 0.6em;
+         padding: 5px;
+      }
+      img {
+         width: 45vw;
+      }
+      &::before {
+         content: "";
+         width: 15vw;
+         height: 12px;
+         position: absolute;
+         left: -21%;
+         top: 50%;
+      }
+      &::after {
+         content: "";
+         width: 15vw;
+         height: 12px;
+         position: absolute;
+         right: -20%;
+         top: 50%;
+      }
+   }
+   .cstmr {
+      h2 {
+         font-size: 0.8em;
+      }
+      h5 {
+         width: 90vw;
+         font-size: 0.6em;
+      }
+      .count {
+         font-size: 0.6em;
+         flex-wrap: wrap;
+         > div {
+            width: 150px;
+            height: 150px;
+            margin: 5px;
+         }
+         i {
+            font-size: 1.5em;
+         }
+      }
+   }
+   #brands {
+      .brand-img {
+         > img {
+            width: 100px;
+            height: 50px;
+            object-fit: contain;
+         }
+      }
+   }
+   footer {
+      margin-top: 10vh;
+      font-size: 0.7em;
+      .footer-content {
+         display: flex;
+         // justify-content: center;
+         align-items: center;
+         // flex-wrap: wrap;
+         flex-direction: column;
+         margin: 0 20px;
+      }
+      .copyright {
+         display: flex;
+         flex-direction: column;
+         height: 17ch;
+      }
+      #slogan {
+         margin: 2em;
+         width: 70vw;
+         font-size: 0.8em;
+      }
+      #form {
+         text-align: center;
+         font-size: 0.85em;
+         display: block;
+         margin: 0 auto;
+         form {
+            textarea {
+               height: 6ch;
+               font-size: 1.3em;
+               width: 140px;
+            }
+         }
+      }
+   }
+}

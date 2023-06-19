@@ -1,0 +1,1190 @@
+//men accessories
+#men-acc {
+   margin-top: 7em;
+   position: relative;
+   h2 {
+      text-align: center;
+      padding: 15px;
+      text-transform: uppercase;
+      border-bottom: 2px solid $mainColor;
+      text-shadow: 0 0 0 $mainColor;
+      box-shadow: 0 5px 5px grey;
+   }
+   img {
+      width: 150px;
+      height: 250px;
+      padding: 10px;
+      cursor: pointer;
+      object-fit: contain;
+      &:hover {
+         transform: scale(1.07);
+         transition: transform 0.5s;
+      }
+   }
+   h3 {
+      text-shadow: 0 0 0 $mainColor;
+      margin-left: 15px;
+      cursor: pointer;
+      width: 170px;
+   }
+   .price {
+      font-weight: bold;
+      font-size: 0.9em;
+      > span {
+         text-decoration: line-through;
+         font-size: 0.8em;
+      }
+   }
+   .off {
+      color: seagreen;
+      font-weight: bold;
+      font-size: 0.8em;
+   }
+   .special {
+      color: green;
+      font-weight: bold;
+      font-size: 0.6em;
+   }
+   .item-left {
+      font-size: 0.7em;
+      color: red;
+      font-weight: bold;
+   }
+   .item-cart {
+      background-color: orangered;
+      padding: 10px;
+      border: none;
+      margin: 10px 0;
+      color: $primaryColor;
+      text-transform: uppercase;
+      font-size: 0.75em;
+      cursor: pointer;
+   }
+   .item-buy {
+      background-color: orange;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      color: $primaryColor;
+      text-transform: uppercase;
+      font-size: 0.75em;
+      cursor: pointer;
+   }
+   @keyframes afterclick {
+      0% {
+         opacity: 0;
+      }
+      50% {
+         opacity: 0.5;
+      }
+      100% {
+         opacity: 1;
+      }
+   }
+   @keyframes Elseafterclick {
+      0% {
+         opacity: 0;
+      }
+      50% {
+         opacity: 0.5;
+      }
+      100% {
+         opacity: 1;
+      }
+   }
+   .wish-list {
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: darken($color: white, $amount: 10);
+      font-size: 1.5em;
+      position: absolute;
+      top: 3%;
+      right: 5%;
+      transition: all 1s;
+      &:before {
+         display: none;
+         content: "Add to Wish-List";
+         background: rgba(0, 0, 0, 0.5);
+         color: $primaryColor;
+         width: 16ch;
+         position: absolute;
+         top: -50%;
+         padding: 2px 0 8px 0;
+         right: 0%;
+         font-size: 0.5em;
+         clip-path: polygon(
+            0% 0%,
+            100% 0%,
+            100% 75%,
+            75% 75%,
+            75% 100%,
+            50% 75%,
+            0% 75%
+         );
+      }
+      &:hover::before {
+         display: block;
+      }
+   }
+   @keyframes shake {
+      0% {
+         transform: skew(0);
+      }
+      25% {
+         transform: skew(5deg);
+      }
+      50% {
+         transform: skew(-5deg);
+      }
+      75% {
+         transform: skew(5deg);
+      }
+      100% {
+         transform: skew(-5deg);
+      }
+   }
+   .watches {
+      // display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      margin: 3em 35px 2em 35px;
+      gap: 3em;
+      align-items: flex-start;
+      > div {
+         margin-top: 5ch;
+      }
+      #watch1 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #left-btn {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-btn {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #watch2 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #left-btn1 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-btn1 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total1 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #watch3 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #left-btn2 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-btn2 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total2 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 40px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #watch4 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #left-btn3 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-btn3 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total3 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 40px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #watch5 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #left-btn4 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-btn4 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total4 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #watch6 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #left-btn5 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-btn5 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total5 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 40px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #watch7 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #left-btn6 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-btn6 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total6 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #watch8 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #left-btn7 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-btn7 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total7 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 40px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #watch9 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 530px;
+         text-align: center;
+         display: none;
+         #left-btn8 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-btn8 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total8 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 40px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+   }
+   .backpack {
+      // display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      margin: 2em 35px;
+      gap: 3em;
+      align-items: flex-start;
+      .capacity {
+         display: flex;
+         align-items: center;
+         justify-content: space-evenly;
+         text-shadow: 0 0 0 $mainColor;
+         font-weight: bold;
+         margin-top: 5px;
+         font-size: 0.65em;
+         .litre {
+            border: 1px solid lightgrey;
+            padding: 0 10px;
+            cursor: pointer;
+            &:hover {
+               border: 1px solid silver;
+            }
+         }
+      }
+      > div {
+         margin-top: 5ch;
+      }
+      #backpack1 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 580px;
+         text-align: center;
+         display: none;
+         #left-bpbtn {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-bpbtn {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total-bp {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #backpack2 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 580px;
+         text-align: center;
+         display: none;
+         #left-bpbtn1 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-bpbtn1 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total-bp1 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 35px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #backpack3 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 580px;
+         text-align: center;
+         display: none;
+         #left-bpbtn2 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-bpbtn2 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total-bp2 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 35px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #backpack4 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 580px;
+         text-align: center;
+         display: none;
+         #left-bpbtn3 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-bpbtn3 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total-bp3 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 35px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #backpack5 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 580px;
+         text-align: center;
+         display: none;
+         #left-bpbtn4 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-bpbtn4 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total-bp4 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 35px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+   }
+   .wallet {
+      // display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      margin: 2em 35px;
+      gap: 3em;
+      align-items: flex-start;
+      > div {
+         margin-top: 5ch;
+      }
+      img {
+         width: 250px;
+      }
+      #wallet1 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 550px;
+         text-align: center;
+         display: none;
+         #left-wlbtn {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-wlbtn {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total-wl {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wallet2 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 550px;
+         text-align: center;
+         display: none;
+         #left-wlbtn1 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-wlbtn1 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total-wl1 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wallet3 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 550px;
+         text-align: center;
+         display: none;
+         #left-wlbtn2 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-wlbtn2 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total-wl2 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 35px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #wallet4 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 550px;
+         text-align: center;
+         display: none;
+         #left-wlbtn3 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-wlbtn3 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total-wl3 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+   }
+   .belt {
+      // display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      margin: 2em 35px;
+      gap: 3em;
+      align-items: flex-start;
+      .wsize {
+         display: flex;
+         align-items: center;
+         justify-content: space-evenly;
+         text-shadow: 0 0 0 $mainColor;
+         font-weight: bold;
+         margin-top: 5px;
+         font-size: 0.65em;
+         .one-size {
+            border: 1px solid lightgrey;
+            padding: 0 10px;
+            cursor: pointer;
+            &:hover {
+               border: 1px solid silver;
+            }
+         }
+      }
+      > div {
+         margin-top: 5ch;
+      }
+      img {
+         width: 250px;
+      }
+      #belt1 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 570px;
+         text-align: center;
+         display: none;
+         #left-belbtn {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-belbtn {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total-bel {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #belt2 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 570px;
+         text-align: center;
+         display: none;
+         #left-belbtn1 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-belbtn1 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total-bel1 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #belt3 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 570px;
+         text-align: center;
+         display: none;
+         #left-belbtn2 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-belbtn2 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total-bel2 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 35px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #belt4 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 570px;
+         text-align: center;
+         display: none;
+         #left-belbtn3 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-belbtn3 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total-bel3 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+   }
+   .sunglasses {
+      // display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      margin: 2em 35px;
+      gap: 3em;
+      align-items: flex-start;
+      .sgsize {
+         display: flex;
+         align-items: center;
+         justify-content: space-evenly;
+         text-shadow: 0 0 0 $mainColor;
+         font-weight: bold;
+         margin-top: 5px;
+         font-size: 0.65em;
+         .size-chart {
+            border: 1px solid lightgrey;
+            padding: 0 10px;
+            cursor: pointer;
+            &:hover {
+               border: 1px solid silver;
+            }
+         }
+      }
+      > div {
+         margin-top: 5ch;
+      }
+      img {
+         width: 230px;
+      }
+      #sunglasses1 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 600px;
+         text-align: center;
+         display: none;
+         #left-sgbtn {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-sgbtn {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total-sg {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 35px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #sunglasses2 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 600px;
+         text-align: center;
+         display: none;
+         #left-sgbtn1 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-sgbtn1 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total-sg1 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #sunglasses3 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 600px;
+         text-align: center;
+         display: none;
+         #left-sgbtn2 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-sgbtn2 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total-sg2 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #sunglasses4 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 600px;
+         text-align: center;
+         display: none;
+         #left-sgbtn3 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-sgbtn3 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total-sg3 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 35px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #sunglasses5 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 600px;
+         text-align: center;
+         display: none;
+         #left-sgbtn4 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-sgbtn4 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total-sg4 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #sunglasses6 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 600px;
+         text-align: center;
+         display: none;
+         #left-sgbtn5 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-sgbtn5 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total-sg5 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 35px 0 10px 0;
+            font-size: 0.8em;
+         }
+      }
+      #sunglasses7 {
+         width: 300px;
+         position: relative;
+         background: white;
+         filter: drop-shadow(0 0 5px lightgrey);
+         height: 600px;
+         text-align: center;
+         display: none;
+         #left-sgbtn6 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            left: 2%;
+         }
+         #right-sgbtn6 {
+            background: transparent;
+            border: none;
+            font-size: 2em;
+            position: absolute;
+            top: 15%;
+            right: 2%;
+         }
+         #total-sg6 {
+            background: $mainColor;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 0.8em;
+         }
+      }
+   }
+}

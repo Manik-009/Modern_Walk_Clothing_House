@@ -1,0 +1,95 @@
+#partner {
+   background: linear-gradient(to right, #200122, #6f0000);
+   width: 50vw;
+   margin: 0 auto;
+   padding: 10px;
+   @include border-rad(50px);
+   position: relative;
+   h2 {
+      color: $primaryColor;
+      padding: 20px;
+      text-align: center;
+      text-shadow: 0 0 10px $mainColor;
+      border-bottom: 3px solid $primaryColor;
+      margin-bottom: 20px;
+   }
+   img {
+      width: 30vw;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+   }
+   &::before {
+      content: "";
+      width: 28vw;
+      height: 20px;
+      background: linear-gradient(to left, #200122, #6f0000);
+      position: absolute;
+      left: -50%;
+      clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+      top: 50%;
+   }
+   &::after {
+      content: "";
+      width: 28vw;
+      height: 20px;
+      clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+      background: linear-gradient(to left, #200122, #6f0000);
+      position: absolute;
+      right: -49.2%;
+      top: 50%;
+   }
+}
+#brands {
+   position: relative;
+   margin: 2em 0;
+   h1 {
+      text-align: center;
+      border-bottom: 2px solid #000;
+      padding: 10px;
+      text-transform: uppercase;
+      box-shadow: 0px 5px 5px grey;
+   }
+   .brand-img {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      cursor: grab;
+      > img {
+         width: 280px;
+         height: 150px;
+         object-fit: contain;
+         animation: imgAni 10s ease-in-out 0.1s infinite;
+         &:hover {
+            transform: scale(1.1);
+            transition: transform 1s;
+            cursor: grabbing;
+         }
+      }
+      @keyframes imgAni {
+         0% {
+            opacity: 0;
+         }
+         50% {
+            opacity: 1;
+         }
+         100% {
+            opacity: 0;
+         }
+      }
+      > button {
+         background: black;
+         color: #fff;
+         border: none;
+         font-size: 2em;
+         padding: 5px;
+      }
+      #one {
+         font-size: 20em;
+         position: absolute;
+         top: 50%;
+         left: 0;
+      }
+   }
+}

@@ -1,0 +1,118 @@
+main {
+   margin: 6em 0;
+   background: linear-gradient(to bottom, #2193b0, #6dd5ed);
+   position: relative;
+   h1 {
+      text-align: center;
+      margin: 1em 0;
+      padding-top: 1em;
+      text-transform: uppercase;
+      color: $primaryColor;
+      text-shadow: 0 0 5px $mainColor;
+   }
+   h3 {
+      text-align: center;
+      margin: 2em 0;
+      letter-spacing: 1px;
+      position: relative;
+      color: $primaryColor;
+      animation: hurry 2s ease-in-out 0.1s infinite alternate;
+      @keyframes hurry {
+         0% {
+            opacity: 0;
+         }
+         50% {
+            opacity: 0.5;
+         }
+         100% {
+            opacity: 1;
+         }
+      }
+   }
+   .offers {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: $primaryColor;
+      img {
+         width: 400px;
+         height: 300px;
+      }
+      h4 {
+         text-align: center;
+         font-size: 1.5em;
+         margin: 10px 0;
+         font-variant: small-caps;
+      }
+      #limited {
+         padding: 20px;
+         background: linear-gradient(to right, #360033, #0b8793);
+      }
+      #special {
+         padding: 20px;
+         background: linear-gradient(to right, #360033, #0b8793);
+      }
+      .ofr {
+         text-decoration: none;
+         position: relative;
+         color: $primaryColor;
+         text-shadow: 0 0 0 white;
+         &::before {
+            content: "";
+            background-color: white;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 2px;
+         }
+         &::after {
+            content: "";
+            background-color: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+         }
+         &:hover::before {
+            width: 6ch;
+            transition: width 3s;
+         }
+         &:hover::after {
+            width: 6ch;
+            transition: width 3s;
+         }
+      }
+      .ofrLink {
+         text-decoration: none;
+      }
+   }
+   #sbi {
+      display: grid;
+      background: $primaryColor;
+      width: 45vw;
+      margin: 2em auto;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      font-weight: bold;
+      img {
+         width: 150px;
+         height: 100px;
+         object-fit: cover;
+      }
+      h5 {
+         padding-top: 30px;
+         font-size: 1.1em;
+         padding-left: 10px;
+         border-left: 1px solid $mainColor;
+      }
+      p {
+         grid-column: 2/3;
+         border-left: 1px solid $mainColor;
+         padding-left: 10px;
+         font-size: 0.7em;
+         margin-top: -20px;
+      }
+   }
+}
